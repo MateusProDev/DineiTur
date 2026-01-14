@@ -29,7 +29,33 @@ const BannerCarousel = () => {
           .sort((a, b) => (a.ordem || 0) - (b.ordem || 0)); // Ordenar por ordem
 
         console.log(`✅ ${bannersData.length} banners ativos carregados`);
-        setBanners(bannersData);
+        // Se não há banners no Firebase, usar banners padrão
+        if (bannersData.length === 0) {
+          setBanners([
+            {
+              id: 'default1',
+              titulo: 'Explore Destinos Incríveis',
+              subtitulo: 'Suas melhores férias começam aqui',
+              imagem: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920&q=80',
+              botaoTexto: 'Ver Pacotes',
+              botaoLink: '/pacotes',
+              ativo: true,
+              ordem: 1
+            },
+            {
+              id: 'default2',
+              titulo: 'Viagens Personalizadas',
+              subtitulo: 'Planeje sua viagem dos sonhos',
+              imagem: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&q=80',
+              botaoTexto: 'Saiba Mais',
+              botaoLink: '/contato',
+              ativo: true,
+              ordem: 2
+            }
+          ]);
+        } else {
+          setBanners(bannersData);
+        }
       } catch (err) {
         console.error('❌ Erro ao buscar banners:', err);
         // Banners fallback caso dê erro
@@ -82,9 +108,8 @@ const BannerCarousel = () => {
     );
   }
 
-  if (banners.length === 0) {
-    return null;
-  }
+  // Removido: if (banners.length === 0) return null;
+  // Agora sempre mostra pelo menos banners padrão
 
   return (
     <section 
