@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "dineitur"
+    "default": "dineiturauth"
   },
   "targets": {},
   "etags": {}

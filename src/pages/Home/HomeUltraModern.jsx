@@ -39,6 +39,7 @@ const HomeUltraModern = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [whatsappNumber, setWhatsappNumber] = useState('');
   const [services, setServices] = useState([]);
+  const [whyChooseUsData, setWhyChooseUsData] = useState([]);
 
   const categorias = {
     'passeio': 'Passeios e Experiências',
@@ -105,6 +106,16 @@ const HomeUltraModern = () => {
             }
           ]);
           console.log('⚠️ Usando serviços estáticos (Firestore não encontrado)');
+        }
+
+        // Buscar Why Choose Us do Firestore
+        const whyChooseDoc = await getDoc(doc(db, 'content', 'whyChooseSection'));
+        if (whyChooseDoc.exists() && whyChooseDoc.data().features) {
+          setWhyChooseUsData(whyChooseDoc.data().features);
+          console.log('✅ Why Choose Us carregado do Firestore:', whyChooseDoc.data().features);
+        } else {
+          setWhyChooseUsData([]);
+          console.log('⚠️ Usando Why Choose Us estáticos (Firestore não encontrado)');
         }
 
         // Buscar Pacotes (todos, não apenas 6)
@@ -381,10 +392,10 @@ const HomeUltraModern = () => {
               </p>
               
               <div className="features-list-ultra">
-                {whyChooseUs.map((feature, index) => (
+                {(whyChooseUsData.length > 0 ? whyChooseUsData : whyChooseUs).map((feature, index) => (
                   <div key={index} className="feature-item-ultra">
                     <div className="feature-icon-circle">
-                      {feature.icon}
+                      {feature.icon || <FiAward />}
                     </div>
                     <div className="feature-text">
                       <h4>{feature.title}</h4>
