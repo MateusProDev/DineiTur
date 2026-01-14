@@ -1,0 +1,174 @@
+{
+  "buildCommand": "craco build",
+  "devCommand": "craco start",
+  "functions": {
+    "api/mercadopago.js": {
+      "maxDuration": 30
+    }
+  },
+  "headers": [
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/:path*\\.(ico|png|jpg|jpeg|webp|svg)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/static/js/(.*)\\.chunk\\.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/static/css/(.*)\\.css",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/manifest\\.json",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/service-worker\\.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/favicon\\.ico",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "Access-Control-Allow-Methods",
+          "value": "GET, POST, PUT, DELETE, OPTIONS"
+        },
+        {
+          "key": "Access-Control-Allow-Headers",
+          "value": "Content-Type, Authorization"
+        }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.transferfortalezatur.com.br"
+        }
+      ],
+      "destination": "https://transferfortalezatur.com.br/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "query",
+          "key": "utm_source"
+        }
+      ],
+      "destination": "/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "query",
+          "key": "utm_medium"
+        }
+      ],
+      "destination": "/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "query",
+          "key": "utm_campaign"
+        }
+      ],
+      "destination": "/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "query",
+          "key": "gclid"
+        }
+      ],
+      "destination": "/$1",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  
+  ]
+}

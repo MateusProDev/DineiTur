@@ -1,0 +1,31 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Allow all images and icons
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.ico$
+Allow: /favicon.ico
+Allow: /android-icon-*.png
+Allow: /apple-icon-*.png
+
+# Sitemap
+Sitemap: https://transferfortalezatur.com.br/sitemap.xml
+
+# Disallow admin pages
+Disallow: /admin/
+Disallow: /admin/*
+
+# Reservation forms: allow crawling so meta `noindex` can be seen by search engines.
+# We prefer allowing crawl and using `meta name="robots" content="noindex"` on pages.
+# (Removed Disallow to let Google fetch the page and honor the page-level `noindex`.)
+
+# Allow important pages
+Allow: /pacotes
+Allow: /destinos
+Allow: /sobre
+Allow: /contato
+Allow: /blog
+Allow: /avaliacoes
+
