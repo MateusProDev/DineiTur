@@ -13,7 +13,7 @@ import axios from 'axios';
 import { CLOUDINARY_CONFIG } from '../../../config/cloudinary';
 import { db } from '../../../firebase/firebase';
 import { 
-  FiPlus, 
+  FiPlus,  
   FiEdit2, 
   FiTrash2, 
   FiSave, 
