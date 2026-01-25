@@ -26,13 +26,6 @@ import './HomeElegantLuxury.css';
 
 import { autoOptimize } from '../../utils/cloudinaryOptimizer';
 
-const defaultStats = [
-  { value: '5K+', label: 'Clientes Satisfeitos', icon: <FiUsers /> },
-  { value: '98%', label: 'Avaliação Positiva', icon: <FiStar /> },
-  { value: '12+', label: 'Anos de Experiência', icon: <FiClock /> },
-  { value: '50+', label: 'Destinos Únicos', icon: <FiCompass /> }
-];
-
 const HomeElegantLuxury = () => {
   const navigate = useNavigate();
   const [pacotesPorCategoria, setPacotesPorCategoria] = useState({});
