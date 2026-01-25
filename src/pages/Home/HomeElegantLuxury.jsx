@@ -6,9 +6,7 @@ import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import WhatsAppButton from '../../components/WhatsAppButton/WhatsAppButton';
 import BannerCarousel from '../../components/BannerCarousel/BannerCarousel';
-import BlogPreview from '../../components/BlogPreview/BlogPreview';
 import PacotesCarousel from '../../components/PacotesCarousel/PacotesCarousel';
-import GoogleReviews from '../../components/GoogleReviews/GoogleReviews';
 import SEOHelmet from '../../components/SEOHelmet/SEOHelmet';
 import { seoData } from '../../utils/seoData';
 import { 
@@ -43,7 +41,6 @@ const HomeElegantLuxury = () => {
   const [whatsappNumber, setWhatsappNumber] = useState('');
   const [services, setServices] = useState([]);
   const [whyChooseUsData, setWhyChooseUsData] = useState([]);
-  const [stats, setStats] = useState([]);
 
   const categorias = {
     'passeio': 'Experiências Exclusivas',
@@ -184,9 +181,6 @@ const HomeElegantLuxury = () => {
           ...doc.data()
         }));
         setAvaliacoes(avaliacoesData);
-
-        // Definir stats
-        setStats(defaultStats);
 
       } catch (error) {
         console.error('Erro ao buscar dados:', error);
