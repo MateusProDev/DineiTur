@@ -10,7 +10,7 @@ const Breadcrumb = ({ items, currentPage }) => {
         <Link to="/" className="breadcrumb-home" aria-label="Ir para home">
           <span className="home-icon">🏠</span>
         </Link>
-        
+         
         {/* Separator after home */}
         <span className="breadcrumb-separator">›</span>
         
