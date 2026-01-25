@@ -301,10 +301,10 @@
 
 /* ============ ROOT VARIABLES ============ */
 :root {
-  --primary-color: #21A657; /* Verde tropical */
-  --secondary-color: #EE7C35; /* Laranja pôr do sol */
-  --accent-color: #F8C144; /* Amarelo dourado */
-  --error-color: #EE7C35; /* Laranja */
+  --primary-color: #2482A6; /* Azul oceano */
+  --secondary-color: #273966; /* Azul profundo */
+  --accent-color: #E7A78F; /* Coral pôr do sol */
+  --error-color: #273966; /* Azul profundo */
   --text-dark: var(--color-text-primary); /* Dark gray */
   --text-medium: var(--color-text-secondary); /* Medium gray */
   --text-light: var(--color-text-light); /* Light gray */
@@ -350,9 +350,9 @@
 .spinner {
   width: 3.5rem;
   height: 3.5rem;
-  border: 4px solid rgba(238, 124, 53, 0.2);
-  border-left-color: #EE7C35;
-  border-top-color: #F8C144;
+  border: 4px solid rgba(231, 167, 143, 0.2);
+  border-left-color: #E7A78F;
+  border-top-color: #273966;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }

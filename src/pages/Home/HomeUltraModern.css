@@ -920,11 +920,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #EE7C35 0%, #F8C144 100%);
+  background: linear-gradient(135deg, #273966 0%, #E7A78F 100%);
   border-radius: 50%;
   color: var(--white);
   font-size: 1.5rem;
-  box-shadow: 0 8px 20px rgba(238, 124, 53, 0.3);
+  box-shadow: 0 8px 20px rgba(231, 167, 143, 0.3);
   transition: all 0.3s var(--transition-smooth);
 }
 
@@ -1173,10 +1173,10 @@
 /* ==================== CTA FINAL ==================== */
 .cta-final-ultra {
   position: relative;
-  background: linear-gradient(135deg, #EE7C35 0%, #F8C144 50%, #FF9A56 100%);
+  background: linear-gradient(135deg, #273966 0%, #E7A78F 50%, #2482A6 100%);
   padding: 6rem 0;
   overflow: hidden;
-  box-shadow: 0 -10px 50px rgba(238, 124, 53, 0.3);
+  box-shadow: 0 -10px 50px rgba(231, 167, 143, 0.3);
 }
 
 .cta-final-ultra::before {

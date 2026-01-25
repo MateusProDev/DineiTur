@@ -90,19 +90,19 @@ const HomeUltraModern = () => {
               image: '/aviaoservico.png',
               title: 'Transfers & Receptivo',
               description: 'Transporte seguro do aeroporto ao hotel com conforto e pontualidade',
-              color: '#21A657'
+              color: '#2482A6'
             },
             {
               image: '/jericoaquaraservico.png',
               title: 'Passeios Privativos',
               description: 'Experiências exclusivas com roteiros personalizados para você',
-              color: '#EE7C35'
+              color: '#273966'
             },
             {
               image: '/fortalezacityservico.png',
               title: 'City Tours',
               description: 'Conheça as principais atrações e cultura local com nossos guias',
-              color: '#F8C144'
+              color: '#E7A78F'
             }
           ]);
           console.log('⚠️ Usando serviços estáticos (Firestore não encontrado)');

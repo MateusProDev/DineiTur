@@ -11,7 +11,7 @@ const Falha = () => (
       description="A página que você tentou acessar não existe ou foi removida. Volte para a Home ou navegue pelos nossos pacotes e destinos."
       canonical="/404"
     />
-    <h1 style={{fontSize: '2.5rem', color: '#EE7C35'}}>404</h1>
+    <h1 style={{fontSize: '2.5rem', color: '#E7A78F'}}>404</h1>
     <h2>Página não encontrada</h2>
     <p>A URL acessada não existe ou foi removida.<br />
       Volte para a <Link to="/">Home</Link> ou navegue pelos nossos <Link to="/pacotes">Pacotes</Link> e <Link to="/destinos">Destinos</Link>.

@@ -50,7 +50,7 @@
 .post-category-badge {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, #EE7C35 0%, #F8C144 100%);
+  background: linear-gradient(135deg, #273966 0%, #E7A78F 100%);
   border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 600;
@@ -185,14 +185,14 @@
 }
 
 .post-tags svg {
-  color: #21A657;
+  color: #2482A6;
   font-size: 1.25rem;
 }
 
 .post-tags span {
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, rgba(33, 166, 87, 0.1) 0%, rgba(120, 200, 229, 0.1) 100%);
-  color: #21A657;
+  background: linear-gradient(135deg, rgba(36, 130, 166, 0.1) 0%, rgba(120, 200, 229, 0.1) 100%);
+  color: #2482A6;
   border-radius: 20px;
   font-weight: 600;
 }
