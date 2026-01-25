@@ -12,8 +12,6 @@ import { seoData } from '../../utils/seoData';
 import { 
   FiStar,
   FiClock,
-  FiUsers,
-  FiCompass,
   FiCheckCircle,
   FiNavigation,
   FiShield,
