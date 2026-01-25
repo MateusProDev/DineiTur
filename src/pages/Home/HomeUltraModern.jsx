@@ -157,9 +157,19 @@ const HomeUltraModern = () => {
           }
         });
         
-        // Limitar a 5 pacotes em destaque por categoria
-        const passeiosLimitados = passeios.filter(p => p.destaque === true).slice(0, 5);
-        const transfersLimitados = transfers.filter(p => p.destaque === true).slice(0, 5);
+        // Limitar a 5 pacotes por categoria (priorizando destaques, depois mais recentes)
+        let passeiosLimitados = passeios.filter(p => p.destaque === true).slice(0, 5);
+        let transfersLimitados = transfers.filter(p => p.destaque === true).slice(0, 5);
+        
+        // Se não há pacotes em destaque, mostrar os mais recentes
+        if (passeiosLimitados.length === 0 && passeios.length > 0) {
+          passeiosLimitados = passeios.slice(0, 5);
+          console.log('ℹ️ Mostrando passeios mais recentes (sem destaques):', passeiosLimitados.length);
+        }
+        if (transfersLimitados.length === 0 && transfers.length > 0) {
+          transfersLimitados = transfers.slice(0, 5);
+          console.log('ℹ️ Mostrando transfers mais recentes (sem destaques):', transfersLimitados.length);
+        }
         
         // Criar objeto agrupado
         const grouped = {};
@@ -174,8 +184,8 @@ const HomeUltraModern = () => {
         
         // Debug
         console.log('📦 Total de pacotes:', pacotesData.length);
-        console.log('🎯 Passeios em destaque (até 5):', passeiosLimitados.length);
-        console.log('🚗 Transfers em destaque (até 5):', transfersLimitados.length);
+        console.log('🎯 Passeios para exibir:', passeiosLimitados.length, passeiosLimitados.length > 0 && passeiosLimitados[0].destaque ? '(destaques)' : '(mais recentes)');
+        console.log('🚗 Transfers para exibir:', transfersLimitados.length, transfersLimitados.length > 0 && transfersLimitados[0].destaque ? '(destaques)' : '(mais recentes)');
 
         // Buscar Avaliações
         const avaliacoesQuery = query(
