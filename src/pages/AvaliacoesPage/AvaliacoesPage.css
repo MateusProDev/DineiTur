@@ -5,7 +5,7 @@
 
 .avaliacoespage-container-unique {
   min-height: 100vh;
-  background: linear-gradient(135deg, #21A657 0%, #1a7d42 100%);
+  background: linear-gradient(135deg, #2482A6 0%, #1d6d8c 100%);
   padding: 100px 0 60px;
   overflow-x: hidden !important;
 }
@@ -324,14 +324,14 @@
   width: 70px;
   height: 70px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #21A657, #1a7d42);
+  background: linear-gradient(135deg, #2482A6, #1d6d8c);
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 2rem;
   font-weight: 700;
-  box-shadow: 0 8px 20px rgba(33, 166, 87, 0.3);
+  box-shadow: 0 8px 20px rgba(36, 130, 166, 0.3);
 }
 
 .avaliacoespage-author-info-unique h4 {
@@ -465,7 +465,7 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #21A657, #1a7d42);
+  background: linear-gradient(135deg, #2482A6, #1d6d8c);
   color: white;
   display: flex;
   align-items: center;

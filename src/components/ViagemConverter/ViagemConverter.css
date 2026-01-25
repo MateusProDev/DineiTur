@@ -247,9 +247,9 @@
 .loading-spinner {
   width: 16px;
   height: 16px;
-  border: 2px solid rgba(238, 124, 53, 0.2);
-  border-top: 2px solid #EE7C35;
-  border-right: 2px solid #F8C144;
+  border: 2px solid rgba(231, 167, 143, 0.2);
+  border-top: 2px solid #E7A78F;
+  border-right: 2px solid #273966;
   border-radius: 50%;
   animation: spin 1s linear infinite;
 }
