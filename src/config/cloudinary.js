@@ -3,6 +3,8 @@
  * Centralized configuration for all Cloudinary operations
  */
 
+console.log('[Cloudinary DEBUG] CLOUDINARY_CLOUD_NAME:', process.env.CLOUDINARY_CLOUD_NAME);
+console.log('[Cloudinary DEBUG] CLOUDINARY_UPLOAD_PRESET:', process.env.CLOUDINARY_UPLOAD_PRESET);
 export const CLOUDINARY_CONFIG = {
   cloudName: process.env.CLOUDINARY_CLOUD_NAME || '',
   uploadPreset: process.env.CLOUDINARY_UPLOAD_PRESET || 'maiatur',
