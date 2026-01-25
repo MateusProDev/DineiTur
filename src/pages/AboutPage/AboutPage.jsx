@@ -6,7 +6,7 @@ import seoData from "../../utils/seoData";
 import AboutCarousel from "../../components/About/AboutCarousel";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
-import Breadcrumb from "../../../Breadcrumb";
+import Breadcrumb from "../../components/Breadcrumb/Breadcrumb";
 import "./AboutPage.css";
 
 const AboutPage = () => {

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Destinos.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import Breadcrumb from '../../../Breadcrumb';
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import SEOHelmet from '../../components/SEOHelmet/SEOHelmet';
 import { seoData } from '../../utils/seoData';
 

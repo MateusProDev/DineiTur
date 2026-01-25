@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Contato.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import Breadcrumb from '../../../Breadcrumb';
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import SEOHelmet from '../../components/SEOHelmet/SEOHelmet';
 import { seoData } from '../../utils/seoData';
 import { FiMail, FiMapPin, FiClock, FiChevronDown, FiChevronUp, FiInfo, FiSend } from 'react-icons/fi';
