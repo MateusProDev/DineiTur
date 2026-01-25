@@ -711,7 +711,6 @@ html {
 
 .hero-cta-minimalist {
   display: flex;
-  gap: 1rem;
   justify-content: center;
   flex-wrap: wrap;
 }

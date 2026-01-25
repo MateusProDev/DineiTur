@@ -236,13 +236,6 @@ const HomeElegantLuxury = () => {
                 <span>Explorar Destinos</span>
                 <IoMdArrowRoundForward />
               </button>
-              <button 
-                onClick={() => handleWhatsApp('Gostaria de planejar uma viagem premium')}
-                className="btn-elegant-secondary"
-              >
-                <FaWhatsapp />
-                <span>Consultoria Personalizada</span>
-              </button>
             </div>
           </div>
         </div>
