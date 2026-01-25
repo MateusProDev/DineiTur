@@ -495,9 +495,9 @@
 }
 
 .pdp-cta-whatsapp {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  background: linear-gradient(135deg, #2482A6 0%, #273966 100%);
   color: var(--pdp-white);
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 15px rgba(36, 130, 166, 0.3);
   margin-bottom: 0.75rem;
 }
 

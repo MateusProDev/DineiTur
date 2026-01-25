@@ -35,7 +35,7 @@ O **OrientacoesReservaModal** é um componente React criado para surpreender e o
 
 ### Paleta de Cores
 - **Sucesso**: Verde #4CAF50
-- **WhatsApp**: Verde #25D366
+- **WhatsApp**: Azul #2482A6
 - **Informação**: Azul #2196F3
 - **Alerta**: Laranja #FF9800
 

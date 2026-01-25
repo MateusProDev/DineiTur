@@ -333,15 +333,15 @@
 }
 
 .cta-whatsapp-button {
-  background: #25D366;
+  background: #2482A6;
   color: white;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 4px 15px rgba(36, 130, 166, 0.4);
 }
 
 .cta-whatsapp-button:hover {
-  background: #20BA5A;
+  background: #1E6B8C;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+  box-shadow: 0 6px 20px rgba(36, 130, 166, 0.5);
 }
 
 .cta-home-button:active,

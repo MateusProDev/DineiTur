@@ -165,13 +165,13 @@
 }
 
 .whatsapp-button {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  background: linear-gradient(135deg, #2482A6 0%, #273966 100%) !important;
   color: white !important;
   font-weight: 600 !important;
   padding: 12px 24px !important;
   border-radius: 25px !important;
   text-transform: none !important;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+  box-shadow: 0 4px 15px rgba(36, 130, 166, 0.4) !important;
   transition: all 0.3s ease !important;
 }
 
@@ -218,13 +218,13 @@
 }
 
 .contact-button {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%) !important;
+  background: linear-gradient(135deg, #2482A6 0%, #273966 100%) !important;
   color: white !important;
   font-weight: 600 !important;
   padding: 10px 24px !important;
   border-radius: 25px !important;
   text-transform: none !important;
-  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4) !important;
+  box-shadow: 0 4px 15px rgba(36, 130, 166, 0.4) !important;
   transition: all 0.3s ease !important;
 }
 

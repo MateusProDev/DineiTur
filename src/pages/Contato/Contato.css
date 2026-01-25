@@ -94,7 +94,7 @@
 
 /* WhatsApp Card Especial */
 .whatsapp-card {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  background: linear-gradient(135deg, #2482A6 0%, #273966 100%);
   color: white;
 }
 
@@ -299,7 +299,7 @@
 }
 
 .whatsapp-submit {
-  background: linear-gradient(135deg, #25D366, #128C7E);
+  background: linear-gradient(135deg, #2482A6, #273966);
   color: white;
   border: none;
   padding: 1.25rem 2rem;
@@ -332,9 +332,9 @@
 }
 
 .whatsapp-submit:hover {
-  background: linear-gradient(135deg, #128C7E, #075E54);
+  background: linear-gradient(135deg, #273966, #1a3d5c);
   transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+  box-shadow: 0 8px 25px rgba(36, 130, 166, 0.4);
 }
 
 .button-icon,

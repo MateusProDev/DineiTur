@@ -138,7 +138,7 @@
 .search-icon {
   position: absolute;
   left: 1.25rem;
-  color: #128C7E;
+  color: #2482A6;
   font-size: 1.2rem;
   z-index: 1;
 }
@@ -158,8 +158,8 @@
 
 .search-input:focus {
   outline: none;
-  border-color: #128C7E;
-  box-shadow: 0 4px 15px rgba(18, 140, 126, 0.15);
+  border-color: #2482A6;
+  box-shadow: 0 4px 15px rgba(36, 130, 166, 0.15);
   transform: translateY(-2px);
 }
 
@@ -195,16 +195,16 @@
 }
 
 .filters-toggle:hover {
-  border-color: #128C7E;
-  color: #128C7E;
+  border-color: #2482A6;
+  color: #2482A6;
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(18, 140, 126, 0.15);
+  box-shadow: 0 4px 15px rgba(36, 130, 166, 0.15);
 }
 
 .filters-toggle.active {
-  border-color: #128C7E;
-  background: rgba(18, 140, 126, 0.1);
-  color: #128C7E;
+  border-color: #2482A6;
+  background: rgba(36, 130, 166, 0.1);
+  color: #2482A6;
 }
 
 .filters-panel {
@@ -256,14 +256,14 @@
 }
 
 .checkbox-label:hover {
-  color: #128C7E;
+  color: #2482A6;
 }
 
 .checkbox-label input[type="checkbox"] {
   width: 20px;
   height: 20px;
   cursor: pointer;
-  accent-color: #128C7E;
+  accent-color: #2482A6;
 }
 
 .clear-filters-btn {
@@ -309,12 +309,12 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: rgba(18, 140, 126, 0.1);
-  color: #128C7E;
+  background: rgba(36, 130, 166, 0.1);
+  color: #2482A6;
   border-radius: 50px;
   font-size: 0.9rem;
   font-weight: 600;
-  border: 1px solid rgba(18, 140, 126, 0.2);
+  border: 1px solid rgba(36, 130, 166, 0.2);
 }
 
 .filter-tag svg:hover {
@@ -333,13 +333,13 @@
   font-size: 1.1rem;
   color: #6b7280;
   padding: 1rem;
-  background: linear-gradient(135deg, rgba(18, 140, 126, 0.05) 0%, rgba(33, 166, 87, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(36, 130, 166, 0.05) 0%, rgba(39, 57, 102, 0.05) 100%);
   border-radius: 12px;
-  border-left: 4px solid #128C7E;
+  border-left: 4px solid #2482A6;
 }
 
 .results-info strong {
-  color: #128C7E;
+  color: #2482A6;
   font-weight: 800;
   font-size: 1.2rem;
 }

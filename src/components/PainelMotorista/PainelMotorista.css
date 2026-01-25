@@ -1135,14 +1135,14 @@
 }
 
 .pm-btn-whatsapp {
-  background: linear-gradient(135deg, #25d366, #128c7e);
+  background: linear-gradient(135deg, #2482A6, #273966);
   color: white;
 }
 
 .pm-btn-whatsapp:hover:not(:disabled) {
-  background: linear-gradient(135deg, #128c7e, #075e54);
+  background: linear-gradient(135deg, #273966, #1a3d5c);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
+  box-shadow: 0 4px 8px rgba(36, 130, 166, 0.3);
 }
 
 .pm-btn-whatsapp:disabled {

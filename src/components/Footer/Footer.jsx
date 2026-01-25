@@ -149,7 +149,7 @@ const FooterUltraModern = () => {
                 {footerData.social?.whatsapp?.link && (
                   <a href={footerData.social.whatsapp.link} target="_blank" rel="noopener noreferrer"
                      className={cx('social-icon-ultra social-whatsapp-ultra')} title="WhatsApp"
-                     style={{background: '#25d366', borderColor: '#25d366'}}>
+                     style={{background: '#2482A6', borderColor: '#2482A6'}}>
                     <FaWhatsapp style={{ color: '#fff', fontSize: '24px' }} />
                   </a>
                 )}

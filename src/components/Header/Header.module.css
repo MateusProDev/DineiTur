@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background: #128C7E;
+  background: #2482A6;
   backdrop-filter: blur(10px);
     /* Logo maior e com flex-grow para ocupar espaço disponível */
   -webkit-backdrop-filter: blur(10px);
@@ -17,7 +17,7 @@
 
 
 .header-scrolled {
-  background: #075E54;
+  background: #273966;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
 }
 
@@ -353,7 +353,7 @@
     right: -100%;
     width: 320px;
     height: 100vh;
-    background: linear-gradient(135deg, #128C7E 0%, #075E54 100%);
+    background: linear-gradient(135deg, #2482A6 0%, #273966 100%);
     flex-direction: column;
     align-items: flex-start;
     padding: 6rem 2rem 2rem;
@@ -476,7 +476,7 @@
 }
 
 .nav-social-whatsapp {
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  background: linear-gradient(135deg, #2482A6 0%, #273966 100%);
   color: white;
 }
 
