@@ -249,6 +249,7 @@ const FooterUltraModern = () => {
             </p>
           </div>
           {/* TripAdvisor - agora abaixo dos links */}
+          {/* COMENTADO TEMPORARIAMENTE - Imagens CADASTUR e TripAdvisor ocultas
           <div className={cx('footer-tripadvisor-ultra')}>
             <img
               src={require('../../assets/Cadastur.png')}
@@ -269,10 +270,12 @@ const FooterUltraModern = () => {
               Acesse nossas avaliações no TripAdvisor
             </a>
           </div>
+          */}
           {/* Crédito Turvia e CNPJ */}
           <div className={cx('footer-credit-turvia', 'footer-credit-turvia--responsive')}>
             <div className={cx('footer-credit-content')}>
-              <span className={cx('footer-cnpj')}>CNPJ: 64.042.188/0001-13</span>
+              {/* COMENTADO TEMPORARIAMENTE - CNPJ oculto */}
+              {/* <span className={cx('footer-cnpj')}>CNPJ: 64.042.188/0001-13</span> */}
               <a 
                 href="https://turvia.com.br" 
                 target="_blank" 
