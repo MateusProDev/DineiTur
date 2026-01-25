@@ -83,10 +83,10 @@ const AdminHelp = () => {
                   <div className="step-content">
                     <p>Use os cards coloridos para acessar rapidamente:</p>
                     <div className="quick-links-preview">
-                      <div className="mini-card" style={{background: 'linear-gradient(135deg, #128C7E, #21A657)'}}>
+                      <div className="mini-card" style={{background: 'linear-gradient(135deg, #273966, #2482A6)'}}>
                         <FiImage /> Banners
                       </div>
-                      <div className="mini-card" style={{background: 'linear-gradient(135deg, #EE7C35, #F8C144)'}}>
+                      <div className="mini-card" style={{background: 'linear-gradient(135deg, #E7A78F, #273966)'}}>
                         <FiPackage /> Pacotes
                       </div>
                       <div className="mini-card" style={{background: 'linear-gradient(135deg, #10b981, #059669)'}}>

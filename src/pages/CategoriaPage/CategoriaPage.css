@@ -413,7 +413,7 @@
 
 .destaque-badge {
   left: 1rem !important;
-  background: linear-gradient(135deg, #EE7C35 0%, #F8C144 100%) !important;
+  background: linear-gradient(135deg, #E7A78F 0%, #273966 100%) !important;
   color: white !important;
 }
 
@@ -482,7 +482,7 @@
 .price-current {
   font-size: 1.5rem !important;
   font-weight: 800 !important;
-  background: linear-gradient(135deg, #21A657 0%, #128C7E 100%) !important;
+  background: linear-gradient(135deg, #2482A6 0%, #273966 100%) !important;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
@@ -493,7 +493,7 @@
   align-items: center !important;
   gap: 0.5rem !important;
   padding: 0.75rem 1.25rem !important;
-  background: linear-gradient(135deg, #21A657 0%, #128C7E 100%) !important;
+  background: linear-gradient(135deg, #2482A6 0%, #273966 100%) !important;
   color: white !important;
   border: none !important;
   border-radius: 50px !important;
@@ -506,8 +506,8 @@
 
 .pacote-card-btn:hover {
   transform: translateX(5px) !important;
-  box-shadow: 0 6px 20px rgba(33, 166, 87, 0.4) !important;
-  background: linear-gradient(135deg, #128C7E 0%, #21A657 100%) !important;
+  box-shadow: 0 6px 20px rgba(36, 130, 166, 0.4) !important;
+  background: linear-gradient(135deg, #273966 0%, #2482A6 100%) !important;
 }
 
 /* ========== SEM RESULTADOS ========== */
@@ -539,7 +539,7 @@
 
 .btn-clear-all {
   padding: 1rem 2rem;
-  background: linear-gradient(135deg, #21A657 0%, #128C7E 100%);
+  background: linear-gradient(135deg, #2482A6 0%, #273966 100%);
   color: white;
   border: none;
   border-radius: 50px;
@@ -547,13 +547,13 @@
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
-  box-shadow: 0 4px 15px rgba(33, 166, 87, 0.3);
+  box-shadow: 0 4px 15px rgba(36, 130, 166, 0.3);
 }
 
 .btn-clear-all:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(33, 166, 87, 0.4);
-  background: linear-gradient(135deg, #128C7E 0%, #21A657 100%);
+  box-shadow: 0 6px 20px rgba(36, 130, 166, 0.4);
+  background: linear-gradient(135deg, #273966 0%, #2482A6 100%);
 }
 
 /* ========== RESPONSIVO ========== */

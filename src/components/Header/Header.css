@@ -657,7 +657,7 @@
 
 .modal-icon {
   font-size: 3rem;
-  color: #EE7C35;
+  color: #E7A78F;
   margin-bottom: 1rem;
   display: inline-block;
   animation: iconPulse 2s ease-in-out infinite;
@@ -692,7 +692,7 @@
 }
 
 .modal-text strong {
-  color: #EE7C35;
+  color: #E7A78F;
   font-weight: 600;
 }
 
@@ -727,16 +727,16 @@
 }
 
 .modal-btn.modal-btn-install {
-  background: linear-gradient(135deg, #EE7C35 0%, #F8C144 100%) !important;
+  background: linear-gradient(135deg, #E7A78F 0%, #273966 100%) !important;
   color: #ffffff !important;
-  box-shadow: 0 4px 15px rgba(238, 124, 53, 0.25) !important;
+  box-shadow: 0 4px 15px rgba(231, 167, 143, 0.25) !important;
   border: none !important;
 }
 
 .modal-btn.modal-btn-install:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(238, 124, 53, 0.35) !important;
-  background: linear-gradient(135deg, #EE7C35 0%, #F8C144 100%) !important;
+  box-shadow: 0 6px 20px rgba(231, 167, 143, 0.35) !important;
+  background: linear-gradient(135deg, #E7A78F 0%, #273966 100%) !important;
 }
 
 .modal-btn.modal-btn-install:active:not(:disabled) {

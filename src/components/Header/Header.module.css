@@ -597,7 +597,7 @@
   width: 48px;
   height: 48px;
   border-radius: 10px;
-  background: linear-gradient(135deg, #EE7C35 0%, #F8C144 100%);
+  background: linear-gradient(135deg, #E7A78F 0%, #273966 100%);
   color: #fff;
   font-size: 1.25rem;
 }
@@ -640,10 +640,10 @@
 }
 
 .modal-btn-install {
-  background: linear-gradient(135deg, #EE7C35 0%, #F8C144 100%);
+  background: linear-gradient(135deg, #E7A78F 0%, #273966 100%);
   color: #ffffff;
   border: none;
-  box-shadow: 0 8px 20px rgba(238,124,53,0.18);
+  box-shadow: 0 8px 20px rgba(231,167,143,0.18);
 }
 
 /* small screens adjustments */

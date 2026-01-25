@@ -361,9 +361,9 @@ const Header = () => {
                 onClick={handleInstallNow}
                 disabled={!deferredPrompt}
                 style={{
-                  background: 'linear-gradient(135deg, #EE7C35 0%, #F8C144 100%)',
+                  background: 'linear-gradient(135deg, #E7A78F 0%, #273966 100%)',
                   color: '#ffffff',
-                  boxShadow: '0 4px 15px rgba(238, 124, 53, 0.25)',
+                  boxShadow: '0 4px 15px rgba(231, 167, 143, 0.25)',
                   border: 'none'
                 }}
               >

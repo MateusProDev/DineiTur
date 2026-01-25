@@ -37,7 +37,7 @@
 
 .wave {
   width: 8px;
-  background: linear-gradient(135deg, #EE7C35 0%, #F8C144 100%);
+  background: linear-gradient(135deg, #E7A78F 0%, #273966 100%);
   border-radius: 10px;
   animation: wave-animation 1.2s ease-in-out infinite;
 }
@@ -97,7 +97,7 @@
 
 /* Loading Text */
 .loading-text {
-  color: #EE7C35;
+  color: #E7A78F;
   font-size: 1rem;
   font-weight: 600;
   margin: 0;
@@ -156,9 +156,9 @@
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  border: 4px solid rgba(238, 124, 53, 0.2);
-  border-top-color: #EE7C35;
-  border-right-color: #F8C144;
+  border: 4px solid rgba(231, 167, 143, 0.2);
+  border-top-color: #E7A78F;
+  border-right-color: #273966;
   animation: spin 1s linear infinite;
   margin-bottom: 1.5rem;
 }
@@ -179,7 +179,7 @@
 .wave-spinner-dots .dot {
   width: 12px;
   height: 12px;
-  background: linear-gradient(135deg, #EE7C35, #F8C144);
+  background: linear-gradient(135deg, #E7A78F, #273966);
   border-radius: 50%;
   animation: dot-wave 1.4s ease-in-out infinite;
 }

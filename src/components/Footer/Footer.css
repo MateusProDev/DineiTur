@@ -1,13 +1,13 @@
 /* ELABORATE PROFESSIONAL FOOTER STYLES — DETAILED UI/UX DESIGN (style-only update) */
 :root {
-  --footer-bg-primary: #1a8546; /* verde escuro tropical */
-  --footer-bg-secondary: #21A657; /* verde tropical principal */
-  --footer-bg-accent: #2bc46a; /* verde claro */
+  --footer-bg-primary: #1a3d5c; /* azul escuro oceano */
+  --footer-bg-secondary: #2482A6; /* azul oceano principal */
+  --footer-bg-accent: #273966; /* azul escuro */
   --footer-text-primary: #ffffff;
   --footer-text-muted: rgba(255, 255, 255, 0.85);
   --footer-text-muted-2: rgba(255, 255, 255, 0.70);
   --footer-text-muted-3: rgba(255, 255, 255, 0.50);
-  --footer-accent: #F8C144; /* amarelo dourado */
+  --footer-accent: #E7A78F; /* coral */
   --footer-accent-hover: #fad16d;
   --footer-border: rgba(255, 255, 255, 0.08);
   --footer-border-hover: rgba(248, 193, 68, 0.25);

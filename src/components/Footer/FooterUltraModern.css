@@ -6,7 +6,7 @@
 }
 
 .footer-links-ultra a {
-  color: #F8C144;
+  color: #273966;
   text-decoration: none;
   font-weight: 600;
   padding: 0 8px;
@@ -16,7 +16,7 @@
 
 .footer-links-ultra a:hover,
 .footer-links-ultra a:focus {
-  color: #EE7C35;
+  color: #E7A78F;
   background: rgba(255,255,255,0.08);
   text-decoration: underline;
 }
@@ -27,18 +27,18 @@
 
 /* ========== VARIÁVEIS ========== */
 :root {
-  --footer-dark: #1a8546;
-  --footer-darker: #16713a;
-  --footer-purple: #21A657;
-  --footer-pink: #EE7C35;
+  --footer-dark: #1a3d5c;
+  --footer-darker: #0f2a3f;
+  --footer-purple: #2482A6;
+  --footer-pink: #E7A78F;
   --footer-blue: #78C8E5;
-  --footer-cyan: #F8C144;
+  --footer-cyan: #273966;
 }
 
 /* ========== FOOTER CONTAINER ========== */
 .footer-ultra-modern {
   position: relative;
-  background: linear-gradient(135deg, #1a8546 0%, #21A657 50%, #2bc46a 100%);
+  background: linear-gradient(135deg, #1a3d5c 0%, #2482A6 50%, #273966 100%);
   color: #ffffff;
   padding: 80px 0 0;
   overflow: hidden;
@@ -233,7 +233,7 @@
 }
 
 .newsletter-btn-ultra {
-  background: linear-gradient(135deg, #EE7C35, #F8C144) !important;
+  background: linear-gradient(135deg, #E7A78F, #273966) !important;
   border: none;
   width: 50px;
   height: 50px;
@@ -248,8 +248,8 @@
 
 .newsletter-btn-ultra:hover {
   transform: scale(1.1) rotate(15deg);
-  box-shadow: 0 5px 20px rgba(238, 124, 53, 0.6) !important;
-  background: linear-gradient(135deg, #F8C144, #EE7C35) !important;
+  box-shadow: 0 5px 20px rgba(231, 167, 143, 0.6) !important;
+  background: linear-gradient(135deg, #273966, #E7A78F) !important;
 }
 
 .newsletter-btn-ultra svg {
@@ -510,7 +510,7 @@
 }
 
 .heart-icon-ultra {
-  color: #EE7C35;
+  color: #E7A78F;
   animation: heartBeat 1.5s ease-in-out infinite;
 }
 
