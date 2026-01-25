@@ -7,7 +7,7 @@ console.log('[Cloudinary DEBUG] CLOUDINARY_CLOUD_NAME:', process.env.CLOUDINARY_
 console.log('[Cloudinary DEBUG] CLOUDINARY_UPLOAD_PRESET:', process.env.CLOUDINARY_UPLOAD_PRESET);
 export const CLOUDINARY_CONFIG = {
   cloudName: process.env.CLOUDINARY_CLOUD_NAME || '',
-  uploadPreset: process.env.CLOUDINARY_UPLOAD_PRESET || 'maiatur',
+  uploadPreset: process.env.CLOUDINARY_UPLOAD_PRESET || 'dineitur',
   apiUrl: `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME || ''}/image/upload`
 };
 
