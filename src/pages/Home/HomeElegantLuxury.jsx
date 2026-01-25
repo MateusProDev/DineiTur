@@ -14,7 +14,12 @@ import {
   FiStar,
   FiClock,
   FiUsers,
-  FiCompass
+  FiCompass,
+  FiCheckCircle,
+  FiNavigation,
+  FiShield,
+  FiArrowRight,
+  FiHeart
 } from 'react-icons/fi';
 import { FaWhatsapp, FaRegGem } from 'react-icons/fa';
 import { IoMdArrowRoundForward } from 'react-icons/io';
@@ -27,7 +32,7 @@ const HomeElegantLuxury = () => {
   const [pacotesPorCategoria, setPacotesPorCategoria] = useState({});
   const [avaliacoes, setAvaliacoes] = useState([]);
   const [loading, setLoading] = useState(true);
-  // const [currentTestimonial, setCurrentTestimonial] = useState(0); // Removido pois não está sendo usado
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [whatsappNumber, setWhatsappNumber] = useState('');
   const [services, setServices] = useState([]);
   const [whyChooseUsData, setWhyChooseUsData] = useState([]);
@@ -191,7 +196,7 @@ const HomeElegantLuxury = () => {
     };
 
     fetchData();
-  }, [defaultStats]); // Corrige dependência do useEffect
+  }, []); // Corrige dependência do useEffect
 
   useEffect(() => {
     try {
