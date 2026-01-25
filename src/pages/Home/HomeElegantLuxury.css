@@ -617,7 +617,61 @@ html {
   outline-offset: 2px;
 }
 
-/* Removidas linhas soltas fora de bloco de seletor */
+/* ==================== HERO MINIMALISTA ==================== */
+.hero-minimalist {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: var(--hero-gradient);
+  padding-top: 100px;
+}
+
+.hero-minimalist .banner-carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+.hero-content-minimalist {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.hero-badge-minimalist {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius-2xl);
+  color: var(--text-white);
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+  box-shadow: var(--shadow-lg);
+}
 
 .hero-badge-minimalist svg {
   font-size: 1.2rem;
@@ -699,6 +753,54 @@ html {
 .btn-elegant-secondary:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-2px);
+}
+
+/* Stats Flutuantes Minimalistas */
+.floating-stats-minimalist {
+  position: absolute;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: var(--spacing-xl);
+  z-index: 2;
+}
+
+.stat-minimalist {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-xl);
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-normal);
+}
+
+.stat-minimalist:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+
+.stat-icon-minimalist {
+  font-size: 2rem;
+  color: var(--white);
+  margin-bottom: var(--spacing-sm);
+  opacity: 0.9;
+}
+
+.stat-minimalist .stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: var(--spacing-xs);
+  display: block;
+}
+
+.stat-minimalist .stat-label {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
 }
 
 /* Stats Flutuantes */

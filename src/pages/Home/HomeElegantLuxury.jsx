@@ -223,6 +223,7 @@ const HomeElegantLuxury = () => {
       
       {/* Hero Minimalista */}
       <section className="hero-minimalist">
+        <BannerCarousel />
         <div className="hero-overlay"></div>
         <div className="container-elegant">
           <div className="hero-content-minimalist">
@@ -260,8 +261,8 @@ const HomeElegantLuxury = () => {
           </div>
         </div>
         
-        {/* Stats Flutuantes Minimalistas */}
-        <div className="floating-stats-minimalist">
+        {/* Stats Flutuantes Minimalistas - Temporariamente removidos para debug */}
+        {/* <div className="floating-stats-minimalist">
           {stats.map((stat, index) => (
             <div key={index} className="stat-minimalist">
               <div className="stat-icon-minimalist">{stat.icon}</div>
@@ -271,7 +272,7 @@ const HomeElegantLuxury = () => {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </section>
 
       {/* Seção de Destaques */}
@@ -514,8 +515,6 @@ const HomeElegantLuxury = () => {
         </div>
       </section>
 
-      <GoogleReviews />
-      <BlogPreview />
       <Footer />
       <WhatsAppButton />
     </div>
