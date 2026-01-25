@@ -4,12 +4,12 @@
    ======================================== */
 
 :root {
-  --pdp-primary: #EE7C35;
-  --pdp-secondary: #F8C144;
-  --pdp-accent: #21A657;
-  --pdp-text: #1a1a2e;
-  --pdp-text-light: #6b7280;
-  --pdp-bg: #f9fafb;
+  --pdp-primary: #2482A6;
+  --pdp-secondary: #273966;
+  --pdp-accent: #E7A78F;
+  --pdp-text: #010101;
+  --pdp-text-light: #9294A0;
+  --pdp-bg: #E7EBE9;
   --pdp-white: #ffffff;
   --pdp-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
   --pdp-shadow-md: 0 4px 20px rgba(0, 0, 0, 0.12);
@@ -230,7 +230,7 @@
 
 .pdp-thumbnail.active {
   border-color: var(--pdp-primary);
-  box-shadow: 0 0 0 4px rgba(238, 124, 53, 0.2);
+  box-shadow: 0 0 0 4px rgba(231, 167, 143, 0.2);
 }
 
 /* No Image */
@@ -369,7 +369,7 @@
   align-items: center;
   gap: 0.75rem;
   padding: 1rem;
-  background: linear-gradient(135deg, rgba(238, 124, 53, 0.05) 0%, rgba(248, 193, 68, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(231, 167, 143, 0.05) 0%, rgba(39, 57, 102, 0.05) 100%);
   border-radius: 12px;
   border-left: 4px solid var(--pdp-primary);
   transition: var(--pdp-transition);
@@ -414,7 +414,7 @@
 
 .pdp-price-card:hover {
   border-color: var(--pdp-primary);
-  box-shadow: 0 12px 40px rgba(238, 124, 53, 0.2);
+  box-shadow: 0 12px 40px rgba(231, 167, 143, 0.2);
 }
 
 .pdp-price-section {
@@ -470,7 +470,7 @@
   display: inline-block;
   margin-top: 0.75rem;
   padding: 0.5rem 1rem;
-  background: linear-gradient(135deg, rgba(33, 166, 87, 0.1) 0%, rgba(33, 166, 87, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(36, 130, 166, 0.1) 0%, rgba(36, 130, 166, 0.05) 100%);
   color: var(--pdp-accent);
   border-radius: 50px;
   font-weight: 700;
@@ -555,10 +555,10 @@
 
 /* Trust Banner */
 .pdp-trust-banner {
-  background: linear-gradient(135deg, rgba(33, 166, 87, 0.1) 0%, rgba(33, 166, 87, 0.05) 100%);
+  background: linear-gradient(135deg, rgba(36, 130, 166, 0.1) 0%, rgba(36, 130, 166, 0.05) 100%);
   padding: 1.5rem;
   border-radius: var(--pdp-radius);
-  border: 2px solid rgba(33, 166, 87, 0.2);
+  border: 2px solid rgba(36, 130, 166, 0.2);
 }
 
 .pdp-trust-banner h3 {

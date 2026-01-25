@@ -193,7 +193,7 @@
 
 /* Info box responsivo */
 .info-box {
-  background: linear-gradient(135deg, var(--color-info-alpha) 0%, rgba(248, 193, 68, 0.05) 100%);
+  background: linear-gradient(135deg, var(--color-info-alpha) 0%, rgba(231, 167, 143, 0.05) 100%);
   border-left: clamp(3px, 0.5vw, 5px) solid var(--color-accent);
   padding: clamp(1.25rem, 2.5vw, 2rem);
   border-radius: clamp(8px, 1vw, 12px);

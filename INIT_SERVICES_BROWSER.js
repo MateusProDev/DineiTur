@@ -29,7 +29,7 @@ const servicesData = {
       title: 'Transfers & Receptivo',
       description: 'Transporte seguro do aeroporto ao hotel com conforto e pontualidade',
       image: '/aviaoservico.png',
-      color: '#21A657',
+      color: '#2482A6',
       link: '/pacotes',
       linkText: 'Saiba mais'
     },
@@ -38,7 +38,7 @@ const servicesData = {
       title: 'Passeios Privativos',
       description: 'Experiências exclusivas com roteiros personalizados para você',
       image: '/jericoaquaraservico.png',
-      color: '#EE7C35',
+      color: '#273966',
       link: '/pacotes',
       linkText: 'Saiba mais'
     },
@@ -47,7 +47,7 @@ const servicesData = {
       title: 'City Tours',
       description: 'Conheça as principais atrações e cultura local com nossos guias',
       image: '/fortalezacityservico.png',
-      color: '#F8C144',
+      color: '#E7A78F',
       link: '/pacotes',
       linkText: 'Saiba mais'
     }
