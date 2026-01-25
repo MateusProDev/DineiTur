@@ -322,7 +322,7 @@ const AdminDashboard = () => {
     { icon: FiSettings, title: "Reservas", description: "Gerenciar reservas online", path: "/admin/reservas", gradient: "from-neutral-600 to-neutral-700" },
     { icon: FiMessageSquare, title: "Blog", description: "Gerenciar posts do blog", path: "/admin/blog", gradient: "from-stone-600 to-stone-700" },
     { icon: FiLink, title: "Link in Bio", description: "Configure links para Instagram", path: "/admin/link-bio", gradient: "from-purple-600 to-pink-600" },
-    { icon: FaGoogle, title: "Google Reviews", description: "Gerenciar avaliações do Google", path: "/admin/google-reviews", gradient: "from-blue-500 to-blue-600" },
+    // { icon: FaGoogle, title: "Google Reviews", description: "Gerenciar avaliações do Google", path: "/admin/google-reviews", gradient: "from-blue-500 to-blue-600" }, // COMENTADO - Funcionalidade Google removida
     { icon: FiSettings, title: "Serviços", description: "Gerenciar seção de serviços", path: "/admin/services", gradient: "from-green-500 to-green-600" },
     { icon: FiInfo, title: "Sobre Nós", description: "Editar página sobre", path: "/admin/edit-about", gradient: "from-slate-500 to-slate-600" },
     { icon: FiImage, title: "Logo", description: "Alterar logo do site", path: "/admin/edit-header", gradient: "from-gray-500 to-gray-600" },
