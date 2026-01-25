@@ -4,7 +4,7 @@
  "description": "Transfers, passeios e experiências em Fortaleza e região",
  "start_url": "/",
  "display": "standalone",
- "theme_color": "#EE7C35",
+  "theme_color": "#2482A6",
  "background_color": "#ffffff",
  "icons": [
   {

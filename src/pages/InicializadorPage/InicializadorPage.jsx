@@ -29,7 +29,7 @@ const InicializadorPage = () => {
             title: 'Transfers & Receptivo',
             description: 'Transporte seguro do aeroporto ao hotel com conforto e pontualidade',
             image: '/aviaoservico.png',
-            color: '#21A657',
+            color: '#2482A6',
             link: '/pacotes',
             linkText: 'Saiba mais'
           },
@@ -38,7 +38,7 @@ const InicializadorPage = () => {
             title: 'Passeios Privativos',
             description: 'Experiências exclusivas com roteiros personalizados para você',
             image: '/jericoaquaraservico.png',
-            color: '#EE7C35',
+            color: '#273966',
             link: '/pacotes',
             linkText: 'Saiba mais'
           },
@@ -47,7 +47,7 @@ const InicializadorPage = () => {
             title: 'City Tours',
             description: 'Conheça as principais atrações e cultura local com nossos guias',
             image: '/fortalezacityservico.png',
-            color: '#F8C144',
+            color: '#E7A78F',
             link: '/pacotes',
             linkText: 'Saiba mais'
           }
@@ -198,9 +198,9 @@ const InicializadorPage = () => {
         title: 'Nossos Serviços',
         subtitle: 'Cada detalhe pensado para tornar sua viagem perfeita',
         services: [
-          { id: 1731340800000, title: 'Transfers & Receptivo', description: 'Transporte seguro do aeroporto ao hotel com conforto e pontualidade', image: '/aviaoservico.png', color: '#21A657', link: '/pacotes', linkText: 'Saiba mais' },
-          { id: 1731340800001, title: 'Passeios Privativos', description: 'Experiências exclusivas com roteiros personalizados para você', image: '/jericoaquaraservico.png', color: '#EE7C35', link: '/pacotes', linkText: 'Saiba mais' },
-          { id: 1731340800002, title: 'City Tours', description: 'Conheça as principais atrações e cultura local com nossos guias', image: '/fortalezacityservico.png', color: '#F8C144', link: '/pacotes', linkText: 'Saiba mais' }
+          { id: 1731340800000, title: 'Transfers & Receptivo', description: 'Transporte seguro do aeroporto ao hotel com conforto e pontualidade', image: '/aviaoservico.png', color: '#2482A6', link: '/pacotes', linkText: 'Saiba mais' },
+          { id: 1731340800001, title: 'Passeios Privativos', description: 'Experiências exclusivas com roteiros personalizados para você', image: '/jericoaquaraservico.png', color: '#273966', link: '/pacotes', linkText: 'Saiba mais' },
+          { id: 1731340800002, title: 'City Tours', description: 'Conheça as principais atrações e cultura local com nossos guias', image: '/fortalezacityservico.png', color: '#E7A78F', link: '/pacotes', linkText: 'Saiba mais' }
         ]
       };
 
@@ -477,9 +477,9 @@ const InicializadorPage = () => {
         </p>
 
         <ul className="lista-acoes">
-          <li>✅ Transfers & Receptivo (verde #21A657)</li>
-          <li>✅ Passeios Privativos (laranja #EE7C35)</li>
-          <li>✅ City Tours (amarelo #F8C144)</li>
+          <li>✅ Transfers & Receptivo (azul #2482A6)</li>
+          <li>✅ Passeios Privativos (azul escuro #273966)</li>
+          <li>✅ City Tours (coral #E7A78F)</li>
         </ul>
 
         <div className="alerta">

@@ -16,7 +16,7 @@
 .pacotes-hero {
   position: relative;
   height: 500px;
-  background: linear-gradient(135deg, #21A657 0%, #78C8E5 100%);
+  background: linear-gradient(135deg, #2482A6 0%, #78C8E5 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +100,7 @@
 
 .search-icon {
   font-size: 1.5rem;
-  color: #21A657;
+  color: #2482A6;
   margin-right: 1rem;
   flex-shrink: 0;
 }
@@ -129,7 +129,7 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: #21A657;
+  color: #2482A6;
   transition: all 0.3s ease;
   flex-shrink: 0;
 }
@@ -208,14 +208,14 @@
 
 .filter-tab:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(33, 166, 87, 0.15);
-  border-color: #21A657;
+  box-shadow: 0 6px 20px rgba(36, 130, 166, 0.15);
+  border-color: #2482A6;
 }
 
 .filter-tab.active {
-  background: linear-gradient(135deg, #21A657 0%, #2bc46a 100%);
+  background: linear-gradient(135deg, #2482A6 0%, #3a9fc0 100%);
   color: #ffffff;
-  box-shadow: 0 8px 25px rgba(33, 166, 87, 0.3);
+  box-shadow: 0 8px 25px rgba(36, 130, 166, 0.3);
 }
 
 .filter-tab svg {
@@ -228,11 +228,11 @@
   gap: 0.5rem;
   padding: 0.75rem 1.5rem;
   background: #ffffff;
-  border: 2px solid #21A657;
+  border: 2px solid #2482A6;
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
-  color: #21A657;
+  color: #2482A6;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
