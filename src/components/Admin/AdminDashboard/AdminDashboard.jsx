@@ -1,5 +1,5 @@
 // Modern Admin Dashboard with Analytics and Quick Edit Links
-import React, { useEffect, useState, useRef, useCallback } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { auth, db } from "../../../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -11,18 +11,11 @@ import {
   FiMail,
   FiMessageSquare,
   FiSettings,
-  FiTrendingUp,
-  FiEye,
   FiZap,
   FiHelpCircle,
   FiChevronRight,
-  
-  FiRefreshCw,
   FiShield,
-  FiLink,
-  FiMousePointer,
-  FiTarget,
-  FiX
+  FiLink
 } from "react-icons/fi";
 // import { FaGoogle } from "react-icons/fa"; // COMENTADO - Funcionalidade Google Search Console removida
 import {
@@ -57,17 +50,6 @@ ChartJS.register(
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const [logoUrl, setLogoUrl] = useState('');
-  
-  // SEO data - COMENTADO - Funcionalidade Google Search Console removida
-  // const [seoData, setSeoData] = useState(null);
-  // const [seoLoading, setSeoLoading] = useState(false);
-  // const [gapiLoaded, setGapiLoaded] = useState(false);
-  
-  // Modal state - COMENTADO - Funcionalidade Google Search Console removida
-  // const [modalInfo, setModalInfo] = useState(null);
-  
-  // Google OAuth client - COMENTADO - Funcionalidade Google Search Console removida
-  // const googleClientRef = useRef(null);
 
   // Load logo
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -85,62 +67,10 @@ const AdminDashboard = () => {
     loadLogo();
   }, []);
 
-  // Load Google Identity Services - COMENTADO - Funcionalidade Google Search Console removida
-  // Move checkExistingToken and exchangeCodeForToken above GIS useEffect to avoid use-before-define lint warnings
-  /*
-  const clearGoogleTokens = () => {
-    localStorage.removeItem('google_access_token');
-    localStorage.removeItem('google_refresh_token');
-    localStorage.removeItem('google_token_timestamp');
-    localStorage.removeItem('google_token_expires_at');
-    localStorage.removeItem('google_keep_signed_until');
-  };
-
-  // Stable fetch function for SEO data
-  const fetchSEOData = useCallback(async (accessToken) => {
-    console.log('🔄 Buscando dados SEO...');
-    setSeoLoading(true);
-    try {
-      const endDate = new Date();
-      const startDate = new Date();
-      startDate.setDate(endDate.getDate() - 30);
-      
-      const startDateStr = startDate.toISOString().split('T')[0]; // YYYY-MM-DD
-      const endDateStr = endDate.toISOString().split('T')[0]; // YYYY-MM-DD
-      
-      const response = await fetch(
-        `https://www.googleapis.com/webmasters/v3/sites/${encodeURIComponent('sc-domain:transferfortalezatur.com.br')}/searchAnalytics/query`,
-        {
-          method: 'POST',
-          headers: {
-            'Authorization': `Bearer ${accessToken || localStorage.getItem('google_access_token')}`,
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            startDate: startDateStr,
-            endDate: endDateStr,
-            dimensions: ['query'],
-            rowLimit: 10
-          }),
-        }
-      );
-
-      const data = await response.json();
-      console.log('📊 Dados SEO recebidos:', data);
-      
-      if (response.ok) {
-        setSeoData(data);
-        console.log('✅ Dados SEO carregados com sucesso!');
-      } else {
-        console.error('❌ Erro na API do Search Console:', data);
-      }
-    } catch (error) {
-      console.error('❌ Erro ao buscar dados SEO:', error);
-    } finally {
-      setSeoLoading(false);
-    }
+  // Load analytics data - Removed Firebase loading
+  useEffect(() => {
+    // Removed Firebase analytics loading
   }, []);
-  */
 
   // COMENTADO - Funcionalidade Google Search Console removida
   /*
@@ -690,3 +620,4 @@ const AdminDashboard = () => {
 };
 
 export default AdminDashboard;
+
