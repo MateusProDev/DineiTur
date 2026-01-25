@@ -3,12 +3,10 @@
  * Centralized configuration for all Cloudinary operations
  */
 
-console.log('[Cloudinary DEBUG] CLOUDINARY_CLOUD_NAME:', process.env.CLOUDINARY_CLOUD_NAME);
-console.log('[Cloudinary DEBUG] CLOUDINARY_UPLOAD_PRESET:', process.env.CLOUDINARY_UPLOAD_PRESET);
 export const CLOUDINARY_CONFIG = {
-  cloudName: process.env.CLOUDINARY_CLOUD_NAME || '',
-  uploadPreset: process.env.CLOUDINARY_UPLOAD_PRESET || 'dineitur',
-  apiUrl: `https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME || ''}/image/upload`
+  cloudName: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME || '',
+  uploadPreset: process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET || 'dineitur',
+  apiUrl: `https://api.cloudinary.com/v1_1/${process.env.REACT_APP_CLOUDINARY_CLOUD_NAME || ''}/image/upload`
 };
 
 /**
