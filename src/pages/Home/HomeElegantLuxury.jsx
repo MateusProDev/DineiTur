@@ -5,31 +5,16 @@ import { db } from '../../firebase/firebase';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
 import WhatsAppButton from '../../components/WhatsAppButton/WhatsAppButton';
-import BannerCarousel from '../../components/BannerCarousel/BannerCarousel';
 import BlogPreview from '../../components/BlogPreview/BlogPreview';
 import PacotesCarousel from '../../components/PacotesCarousel/PacotesCarousel';
 import GoogleReviews from '../../components/GoogleReviews/GoogleReviews';
 import SEOHelmet from '../../components/SEOHelmet/SEOHelmet';
 import { seoData } from '../../utils/seoData';
 import { 
-  FiMapPin, 
-  FiStar, 
-  FiArrowRight,
-  FiAward,
-  FiSun,
-  FiHeart,
-  FiCamera,
-  FiShield,
-  FiSmile,
-  FiCreditCard,
-  FiChevronLeft,
-  FiChevronRight,
-  FiPackage,
-  FiNavigation,
-  FiCompass,
+  FiStar,
   FiClock,
   FiUsers,
-  FiCheckCircle
+  FiCompass
 } from 'react-icons/fi';
 import { FaWhatsapp, FaRegGem } from 'react-icons/fa';
 import { IoMdArrowRoundForward } from 'react-icons/io';
@@ -42,7 +27,7 @@ const HomeElegantLuxury = () => {
   const [pacotesPorCategoria, setPacotesPorCategoria] = useState({});
   const [avaliacoes, setAvaliacoes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  // const [currentTestimonial, setCurrentTestimonial] = useState(0); // Removido pois não está sendo usado
   const [whatsappNumber, setWhatsappNumber] = useState('');
   const [services, setServices] = useState([]);
   const [whyChooseUsData, setWhyChooseUsData] = useState([]);
@@ -206,7 +191,7 @@ const HomeElegantLuxury = () => {
     };
 
     fetchData();
-  }, []);
+  }, [defaultStats]); // Corrige dependência do useEffect
 
   useEffect(() => {
     try {
