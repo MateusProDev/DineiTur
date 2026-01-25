@@ -24,7 +24,7 @@ import {
   FiTarget,
   FiX
 } from "react-icons/fi";
-import { FaGoogle } from "react-icons/fa";
+// import { FaGoogle } from "react-icons/fa"; // COMENTADO - Funcionalidade Google Search Console removida
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -58,16 +58,16 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
   const [logoUrl, setLogoUrl] = useState('');
   
-  // SEO data
-  const [seoData, setSeoData] = useState(null);
-  const [seoLoading, setSeoLoading] = useState(false);
-  const [gapiLoaded, setGapiLoaded] = useState(false);
+  // SEO data - COMENTADO - Funcionalidade Google Search Console removida
+  // const [seoData, setSeoData] = useState(null);
+  // const [seoLoading, setSeoLoading] = useState(false);
+  // const [gapiLoaded, setGapiLoaded] = useState(false);
   
-  // Modal state
-  const [modalInfo, setModalInfo] = useState(null);
+  // Modal state - COMENTADO - Funcionalidade Google Search Console removida
+  // const [modalInfo, setModalInfo] = useState(null);
   
-  // Google OAuth client
-  const googleClientRef = useRef(null);
+  // Google OAuth client - COMENTADO - Funcionalidade Google Search Console removida
+  // const googleClientRef = useRef(null);
 
   // Load logo
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -85,8 +85,9 @@ const AdminDashboard = () => {
     loadLogo();
   }, []);
 
-  // Load Google Identity Services
+  // Load Google Identity Services - COMENTADO - Funcionalidade Google Search Console removida
   // Move checkExistingToken and exchangeCodeForToken above GIS useEffect to avoid use-before-define lint warnings
+  /*
   const clearGoogleTokens = () => {
     localStorage.removeItem('google_access_token');
     localStorage.removeItem('google_refresh_token');
@@ -139,7 +140,10 @@ const AdminDashboard = () => {
       setSeoLoading(false);
     }
   }, []);
+  */
 
+  // COMENTADO - Funcionalidade Google Search Console removida
+  /*
   const checkExistingToken = useCallback(async () => {
     const accessToken = localStorage.getItem('google_access_token');
     const refreshToken = localStorage.getItem('google_refresh_token');
@@ -239,7 +243,10 @@ const AdminDashboard = () => {
       console.error('❌ Erro ao trocar código por token:', error);
     }
   }, [fetchSEOData]);
+  */
 
+  // COMENTADO - Funcionalidade Google Search Console removida
+  /*
   useEffect(() => {
     const loadGIS = () => {
       console.log('🔄 Carregando Google Identity Services...');
@@ -286,6 +293,7 @@ const AdminDashboard = () => {
       document.head.appendChild(script);
     }
   }, [checkExistingToken, exchangeCodeForToken]);
+  */
 
   // Load analytics data - Removed Firebase loading
   useEffect(() => {
@@ -323,6 +331,8 @@ const AdminDashboard = () => {
 
   
 
+  // COMENTADO - Funcionalidade Google Search Console removida
+  /*
   // Handle Google sign in for SEO
   const handleGoogleSignIn = async () => {
     console.log('🔄 Iniciando login Google...');
@@ -349,6 +359,7 @@ const AdminDashboard = () => {
       await fetchSEOData(token);
     }
   };
+  */
 
   // (fetchSEOData is defined above as a stable useCallback)
 
@@ -356,6 +367,8 @@ const AdminDashboard = () => {
 
   // Filter public pages only - Removed Firebase filtering
 
+  // COMENTADO - Funcionalidade Google Search Console removida
+  /*
   // Handle modal
   const openModal = (metricType) => {
     const metricInfo = {
@@ -390,7 +403,10 @@ const AdminDashboard = () => {
   const closeModal = () => {
     setModalInfo(null);
   };
+  */
 
+  // COMENTADO - Funcionalidade Google Search Console removida
+  /*
   // Disconnect Google account
   const disconnectGoogle = () => {
     localStorage.removeItem('google_access_token');
@@ -398,6 +414,7 @@ const AdminDashboard = () => {
     setSeoData(null);
     console.log('✅ Desconectado do Google Search Console');
   };
+  */
 
   return (
     <div className="modern-admin-dashboard-simple">
@@ -422,12 +439,13 @@ const AdminDashboard = () => {
         </div>
 
         <div className="header-actions">
-          {seoData && (
+          {/* COMENTADO - Funcionalidade Google Search Console removida */}
+          {/* {seoData && (
             <button className="google-disconnect-btn" onClick={disconnectGoogle} title="Desconectar Google Search Console">
               <FaGoogle />
               <span>Desconectar</span>
             </button>
-          )}
+          )} */}
           <button className="logout-btn" onClick={handleLogout}>
             <FiLogOut />
             <span>Sair</span>
@@ -439,7 +457,8 @@ const AdminDashboard = () => {
       <main className="dashboard-main-content">
         <div className="dashboard-container">
           
-          {/* SEO Metrics Section */}
+          {/* COMENTADO - Funcionalidade Google Search Console removida */}
+          {/*
           <div className="section-header">
             <h2 className="section-title">
               <FaGoogle />
@@ -554,45 +573,42 @@ const AdminDashboard = () => {
               </div>
             </div>
 
-            {/* Top Queries Section */}
-            {seoData.rows && seoData.rows.length > 0 && (
-              <div className="top-queries-section">
-                <div className="section-header">
-                  <h2 className="section-title">
-                    <FiTrendingUp />
-                    Principais Consultas (Palavras-chave)
-                  </h2>
-                </div>
-                
-                <div className="top-queries-list">
-                  {seoData.rows.map((row, index) => (
-                    <div key={index} className="query-item" style={{ animationDelay: `${index * 0.05}s` }}>
-                      <div className="query-rank">#{index + 1}</div>
-                      <div className="query-content">
-                        <h4 className="query-text">{row.keys[0]}</h4>
-                        <div className="query-metrics">
-                          <span className="query-clicks">
-                            <FiMousePointer />
-                            {row.clicks} cliques
-                          </span>
-                          <span className="query-impressions">
-                            <FiEye />
-                            {row.impressions} impressões
-                          </span>
-                          <span className="query-ctr">
-                            {row.ctr ? (row.ctr * 100).toFixed(1) + '%' : '0%'} CTR
-                          </span>
-                          <span className="query-position">
-                            <FiTarget />
-                            Posição {row.position?.toFixed(1) || 'N/A'}
-                          </span>
-                        </div>
+            <div className="top-queries-section">
+              <div className="section-header">
+                <h2 className="section-title">
+                  <FiTrendingUp />
+                  Principais Consultas (Palavras-chave)
+                </h2>
+              </div>
+              
+              <div className="top-queries-list">
+                {seoData.rows.map((row, index) => (
+                  <div key={index} className="query-item" style={{ animationDelay: `${index * 0.05}s` }}>
+                    <div className="query-rank">#{index + 1}</div>
+                    <div className="query-content">
+                      <h4 className="query-text">{row.keys[0]}</h4>
+                      <div className="query-metrics">
+                        <span className="query-clicks">
+                          <FiMousePointer />
+                          {row.clicks} cliques
+                        </span>
+                        <span className="query-impressions">
+                          <FiEye />
+                          {row.impressions} impressões
+                        </span>
+                        <span className="query-ctr">
+                          {row.ctr ? (row.ctr * 100).toFixed(1) + '%' : '0%'} CTR
+                        </span>
+                        <span className="query-position">
+                          <FiTarget />
+                          Posição {row.position?.toFixed(1) || 'N/A'}
+                        </span>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
-            )}
+            </div>
           </>) : (
             <div className="seo-connect-prompt">
               <FaGoogle className="google-icon-large" />
@@ -608,6 +624,7 @@ const AdminDashboard = () => {
               </button>
             </div>
           )}
+          */}
 
           {/* Quick Actions */}
           <div className="section-header">
@@ -640,33 +657,33 @@ const AdminDashboard = () => {
         </div>
       </main>
 
-      {/* Modal */}
-      {modalInfo && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <div className="modal-header">
-              <h3>{modalInfo.title}</h3>
-              <button className="modal-close" onClick={closeModal}>
-                <FiX />
-              </button>
+      {/* COMENTADO - Funcionalidade Google Search Console removida */}
+      {/*
+      <div className="modal-overlay" onClick={closeModal}>
+        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+          <div className="modal-header">
+            <h3>{modalInfo.title}</h3>
+            <button className="modal-close" onClick={closeModal}>
+              <FiX />
+            </button>
+          </div>
+          <div className="modal-body">
+            <div className="modal-section">
+              <h4>📊 O que significa</h4>
+              <p>{modalInfo.description}</p>
             </div>
-            <div className="modal-body">
-              <div className="modal-section">
-                <h4>📊 O que significa</h4>
-                <p>{modalInfo.description}</p>
-              </div>
-              <div className="modal-section">
-                <h4>🎯 Importância</h4>
-                <p>{modalInfo.importance}</p>
-              </div>
-              <div className="modal-section">
-                <h4>💡 Dicas para melhorar</h4>
-                <p>{modalInfo.tips}</p>
-              </div>
+            <div className="modal-section">
+              <h4>🎯 Importância</h4>
+              <p>{modalInfo.importance}</p>
+            </div>
+            <div className="modal-section">
+              <h4>💡 Dicas para melhorar</h4>
+              <p>{modalInfo.tips}</p>
             </div>
           </div>
         </div>
-      )}
+      </div>
+      */}
 
     </div>
   );
