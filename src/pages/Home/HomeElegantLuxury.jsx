@@ -39,7 +39,6 @@ const HomeElegantLuxury = () => {
   const [pacotesPorCategoria, setPacotesPorCategoria] = useState({});
   const [avaliacoes, setAvaliacoes] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [whatsappNumber, setWhatsappNumber] = useState('');
   const [services, setServices] = useState([]);
   const [whyChooseUsData, setWhyChooseUsData] = useState([]);
@@ -204,17 +203,6 @@ const HomeElegantLuxury = () => {
       document.title = fullTitle;
     } catch (e) {}
   }, []);
-
-  useEffect(() => {
-    if (avaliacoes.length > 0) {
-      const interval = setInterval(() => {
-        setCurrentTestimonial((prev) => 
-          prev === avaliacoes.length - 1 ? 0 : prev + 1
-        );
-      }, 6000);
-      return () => clearInterval(interval);
-    }
-  }, [avaliacoes]);
 
   const handleWhatsApp = (message = '') => {
     const encodedMessage = encodeURIComponent(message);
