@@ -45,6 +45,11 @@ const HomeElegantLuxury = () => {
   const [whyChooseUsData, setWhyChooseUsData] = useState([]);
   const [stats, setStats] = useState([]);
 
+  const categorias = {
+    'passeio': 'Experiências Exclusivas',
+    'transfers': 'Traslados Premium'
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
