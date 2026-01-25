@@ -10,7 +10,7 @@ import { autoInitialize } from "./utils/firestoreUtils";
 import analyticsService from "./services/analyticsService";
 
 // Lazy load components for code splitting
-const HomeUltraModern = lazy(() => import("./pages/Home/HomeUltraModern"));
+const HomeUltraModern = lazy(() => import("./pages/Home/HomeElegantLuxury"));
 const AboutPage = lazy(() => import("./pages/AboutPage/AboutPage"));
 const PacotesListPage = lazy(() => import("./pages/PacotesListPage/PacotesListPage"));
 const PacoteDetailPage = lazy(() => import("./pages/PacoteDetailPage/PacoteDetailPage"));
