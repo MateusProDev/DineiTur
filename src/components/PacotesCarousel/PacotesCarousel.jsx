@@ -143,14 +143,6 @@ const PacotesCarousel = ({ pacotes, categoria, autoPlayInterval = 5000, verMaisL
 
   return (
     <div className="pacotes-carousel-wrapper">
-      <div className="carousel-header">
-        <h3 className="carousel-title">{categoria}</h3>
-        <Link to={verMaisLink} className="carousel-ver-mais">
-          Ver Mais
-          <FiArrowRight />
-        </Link>
-      </div>
-
       <div 
         ref={carouselRef}
         className="carousel-container"
