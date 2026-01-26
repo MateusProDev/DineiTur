@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { FiStar, FiArrowRight } from 'react-icons/fi';
+import { FiStar } from 'react-icons/fi';
 import { autoOptimize } from '../../utils/cloudinaryOptimizer';
 import './PacotesCarousel.css';
 
