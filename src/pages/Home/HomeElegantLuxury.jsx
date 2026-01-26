@@ -211,47 +211,6 @@ const HomeElegantLuxury = () => {
       <section className="hero-minimalist">
         <BannerCarousel />
         <div className="hero-overlay"></div>
-        <div className="container-elegant">
-          <div className="hero-content-minimalist">
-            <div className="hero-badge-minimalist">
-              <FaRegGem />
-              <span>Viagem com Excelência</span>
-            </div>
-            
-            <h1 className="hero-title-minimalist">
-              <span className="title-line">Experiências de Viagem</span>
-              <span className="title-line highlight">Com Exclusividade</span>
-            </h1>
-            
-            <p className="hero-subtitle-minimalist">
-              Descubra um novo padrão em turismo premium. Cada detalhe pensado para oferecer 
-              momentos memoráveis com conforto absoluto e atenção personalizada.
-            </p>
-            
-            <div className="hero-cta-minimalist">
-              <button 
-                onClick={() => navigate('/pacotes')}
-                className="btn-elegant-primary"
-              >
-                <span>Explorar Destinos</span>
-                <IoMdArrowRoundForward />
-              </button>
-            </div>
-          </div>
-        </div>
-        
-        {/* Stats Flutuantes Minimalistas - Temporariamente removidos para debug */}
-        {/* <div className="floating-stats-minimalist">
-          {stats.map((stat, index) => (
-            <div key={index} className="stat-minimalist">
-              <div className="stat-icon-minimalist">{stat.icon}</div>
-              <div className="stat-content">
-                <div className="stat-value">{stat.value}</div>
-                <div className="stat-label">{stat.label}</div>
-              </div>
-            </div>
-          ))}
-        </div> */}
       </section>
 
       {/* Seção de Destaques */}
