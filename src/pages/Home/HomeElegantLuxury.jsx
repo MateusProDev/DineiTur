@@ -306,7 +306,14 @@ const HomeElegantLuxury = () => {
                   )}
                   
                   <button 
-                    onClick={() => handleWhatsApp(`Gostaria de saber mais sobre: ${service.title}`)}
+                    onClick={() => {
+                      if (service.link) {
+                        navigate(service.link);
+                      } else {
+                        const url = `https://wa.me/5585986435640?text=${encodeURIComponent(`Gostaria de saber mais sobre: ${service.title}`)}`;
+                        window.open(url, '_blank');
+                      }
+                    }}
                     className="service-cta-elegant"
                   >
                     <span>Solicitar Detalhes</span>
