@@ -16,7 +16,7 @@ const ReservasPage = () => {
       descricao: "Reserve um passeio turístico completo",
       icone: <FaRoute size={40} />,
       rota: "/reservas/passeio",
-      cor: "#4CAF50",
+      cor: "#2482A6",
     },
     {
       id: "transfer-chegada",
@@ -24,7 +24,7 @@ const ReservasPage = () => {
       descricao: "Aeroporto → Hotel",
       icone: <FaPlane size={40} />,
       rota: "/reservas/transfer-chegada",
-      cor: "#2196F3",
+      cor: "#273966",
     },
     {
       id: "transfer-chegada-saida",
@@ -32,7 +32,7 @@ const ReservasPage = () => {
       descricao: "Aeroporto → Hotel → Aeroporto",
       icone: <FaExchangeAlt size={40} />,
       rota: "/reservas/transfer-chegada-e-saida",
-      cor: "#9C27B0",
+      cor: "#78C8E5",
     },
     {
       id: "transfer-saida",
@@ -40,7 +40,7 @@ const ReservasPage = () => {
       descricao: "Hotel → Aeroporto",
       icone: <FaPlaneDeparture size={40} />,
       rota: "/reservas/transfer-saida",
-      cor: "#FF9800",
+      cor: "#1d6d8c",
     },
     {
       id: "transfer-entre-hoteis",
@@ -48,7 +48,7 @@ const ReservasPage = () => {
       descricao: "Hotel → Outro Hotel",
       icone: <FaHotel size={40} />,
       rota: "/reservas/transfer-entre-hoteis",
-      cor: "#F44336",
+      cor: "#E7A78F",
     },
   ];
 
@@ -62,8 +62,8 @@ const ReservasPage = () => {
       />
       <div className="reservas-header">
         <img 
-          src="/android-chrome-512x512.png" 
-          alt="Transfer Fortaleza Tur Logo" 
+          src="/logo192.png" 
+          alt="Dinei Tur Logo" 
           className="reservas-logo"
         />
         <h1>Reservas Online</h1>
