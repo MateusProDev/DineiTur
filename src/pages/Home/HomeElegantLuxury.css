@@ -626,7 +626,6 @@ html {
   justify-content: center;
   overflow: hidden;
   background: var(--hero-gradient);
-  padding-top: 100px;
 }
 
 .hero-minimalist .banner-carousel {
