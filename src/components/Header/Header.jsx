@@ -163,15 +163,15 @@ const Header = () => {
           {logoUrl ? (
             <img 
               src={autoOptimize(logoUrl, 'logo')} 
-              alt="Transfer Fortaleza Tur Logo"
+              alt="Dinei Tur Logo"
               width="50"
               height="50"
               loading="eager"
             />
           ) : (
             <div className={cx('logo-placeholder-modern')}>
-              <span className={cx('logo-text')}>TRANSFER FORTALEZA TUR</span>
-              <span className={cx('logo-tagline')}>Viagens & Turismo</span>
+              <span className={cx('logo-text')}>DINEI TUR</span>
+              <span className={cx('logo-tagline')}>Viagens e Turismo</span>
             </div>
           )}
         </Link>
@@ -317,7 +317,7 @@ const Header = () => {
               className={cx('header-install-btn-modern')}
               onClick={handleInstallClick}
               aria-label="Instalar aplicativo"
-              title="Instalar Transfer Fortaleza Tur como App"
+              title="Instalar Dinei Tur como App"
             >
               <FiSmartphone />
               <span className={cx('install-text')}>App</span>
@@ -342,11 +342,11 @@ const Header = () => {
           <div className={cx('modal-card')} onClick={(e) => e.stopPropagation()}>
             <div className={cx('modal-header')}>
               <FiSmartphone className={cx('modal-icon')} />
-              <h3 className={cx('modal-title')}>Instalar App Transfer Fortaleza Tur</h3>
+              <h3 className={cx('modal-title')}>Instalar App Dinei Tur</h3>
             </div>
             <div className={cx('modal-body')}>
               <p className={cx('modal-text')}>
-                📱 Instale o app Transfer Fortaleza Tur para acesso rápido e experiência melhorada!
+                📱 Instale o app Dinei Tur para acesso rápido e experiência melhorada!
               </p>
             </div>
             <div className={cx('modal-footer')}>
