@@ -13,7 +13,7 @@ const PacotesCarousel = ({ pacotes, categoria, autoPlayInterval = 5000, verMaisL
   const carouselRef = useRef(null);
 
   const itemsPerView = {
-    desktop: 3,
+    desktop: 3, 
     tablet: 2,
     mobile: 1
   };
