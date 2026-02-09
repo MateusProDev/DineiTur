@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Metadados SEO para todas as páginas do site
  * Centraliza títulos, descrições e canonical URLs
  */

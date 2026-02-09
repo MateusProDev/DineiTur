@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Contato.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';

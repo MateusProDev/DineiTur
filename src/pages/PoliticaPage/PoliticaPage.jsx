@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import "./PoliticaPage.css";
 import SEOHelmet from '../../components/SEOHelmet/SEOHelmet';
 import { seoData } from '../../utils/seoData';
