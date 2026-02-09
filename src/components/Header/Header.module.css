@@ -349,32 +349,67 @@
 
   .header-nav-modern {
     position: fixed;
-    top: 0;
-    right: -100%;
-    width: 320px;
-    height: 100vh;
-    background: linear-gradient(135deg, #2482A6 0%, #273966 100%);
+    top: 90px;
+    left: 0;
+    width: 100%;
+    max-height: calc(100vh - 90px);
+    background: linear-gradient(180deg, #2482A6 0%, #1e6b8a 50%, #273966 100%);
     flex-direction: column;
-    align-items: flex-start;
-    padding: 6rem 2rem 2rem;
+    align-items: stretch;
+    padding: 0 1.5rem;
     gap: 0;
-    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.25);
-    transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     overflow-y: auto;
-    z-index: 1005; /* bring mobile nav above header/logo */
+    z-index: 1005;
+    /* Animação de cima pra baixo */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition:
+      visibility 0s linear 0.35s,
+      opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      padding 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 0 0 16px 16px;
   }
 
   .header-nav-modern.nav-open {
-    right: 0;
-    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.35);
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    padding: 1.5rem;
+    transition:
+      visibility 0s linear 0s,
+      opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      padding 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  /* Export a standalone nav-open class so CSS Modules can apply it when used
-     as a separate token (styles['nav-open']) from JS. This ensures the
-     dynamic class name added via the cx helper actually maps to CSS. */
   .nav-open {
-    right: 0 !important;
-    box-shadow: -8px 0 40px rgba(0, 0, 0, 0.35);
+    visibility: visible !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    pointer-events: auto !important;
+    padding: 1.5rem !important;
+    transition:
+      visibility 0s linear 0s,
+      opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+      padding 0.35s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  }
+
+  /* Overlay escuro atrás do menu */
+  .nav-overlay {
+    position: fixed;
+    top: 90px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 90px);
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1004;
+    animation: fadeIn 0.3s ease forwards;
   }
 
   .header-nav-list-modern {
@@ -388,8 +423,14 @@
   .nav-link-modern {
     width: 100%;
     padding: 1rem 1.25rem;
-    border-radius: 8px;
-    margin-bottom: 0.5rem;
+    border-radius: 12px;
+    margin-bottom: 0.25rem;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+
+  .nav-link-modern:active {
+    transform: scale(0.97);
+    background: rgba(255, 255, 255, 0.15);
   }
 
   .nav-link-modern::before {

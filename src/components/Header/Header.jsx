@@ -179,7 +179,13 @@ const Header = () => {
         <div className={cx('header-actions-modern')}>
           {/* Buttons rendered into body via portal to avoid stacking context issues */}
         </div>
-        <nav className={cx(`header-nav-modern ${menuOpen ? 'nav-open' : ''}`)}>
+        {menuOpen && (
+          <div 
+            className={cx('nav-overlay')} 
+            onClick={() => setMenuOpen(false)} 
+          />
+        )}
+        <nav className={cx(`header-nav-modern ${menuOpen ? 'nav-open' : ''}`)}>    
           <ul className={cx('header-nav-list-modern')}>
             <li>
               <Link to="/" onClick={() => setMenuOpen(false)} className={cx('nav-link-modern')}>
