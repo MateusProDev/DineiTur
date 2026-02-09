@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { collection, getDocs, query, orderBy, limit, doc, getDoc } from 'firebase/firestore';
+import { collection, getDocs, doc, getDoc } from 'firebase/firestore';
 import { db } from '../../firebase/firebase';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -104,16 +104,19 @@ const HomeElegantLuxury = () => {
           ]);
         }
 
-        // Buscar Pacotes
-        const pacotesQuery = query(
-          collection(db, 'pacotes'),
-          orderBy('createdAt', 'desc')
-        );
-        const pacotesSnapshot = await getDocs(pacotesQuery);
-        const pacotesData = pacotesSnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
+        // Buscar Pacotes (sem orderBy para evitar necessidade de índice)
+        const pacotesSnapshot = await getDocs(collection(db, 'pacotes'));
+        const pacotesData = pacotesSnapshot.docs.map(d => ({
+          id: d.id,
+          ...d.data()
         }));
+
+        // Ordenar no código por createdAt desc
+        pacotesData.sort((a, b) => {
+          const aTime = a.createdAt?.seconds || a.createdAt || 0;
+          const bTime = b.createdAt?.seconds || b.createdAt || 0;
+          return bTime - aTime;
+        });
         
         // Agrupar pacotes
         const passeios = [];
@@ -160,17 +163,16 @@ const HomeElegantLuxury = () => {
         
         setPacotesPorCategoria(grouped);
         
-        // Buscar Avaliações
-        const avaliacoesQuery = query(
-          collection(db, 'avaliacoes'),
-          orderBy('createdAt', 'desc'),
-          limit(5)
-        );
-        const avaliacoesSnapshot = await getDocs(avaliacoesQuery);
-        const avaliacoesData = avaliacoesSnapshot.docs.map(doc => ({
-          id: doc.id,
-          ...doc.data()
-        }));
+        // Buscar Avaliações (sem orderBy para evitar necessidade de índice)
+        const avaliacoesSnapshot = await getDocs(collection(db, 'avaliacoes'));
+        const avaliacoesData = avaliacoesSnapshot.docs
+          .map(d => ({ id: d.id, ...d.data() }))
+          .sort((a, b) => {
+            const aTime = a.createdAt?.seconds || a.createdAt || 0;
+            const bTime = b.createdAt?.seconds || b.createdAt || 0;
+            return bTime - aTime;
+          })
+          .slice(0, 5);
         setAvaliacoes(avaliacoesData);
 
       } catch (error) {
