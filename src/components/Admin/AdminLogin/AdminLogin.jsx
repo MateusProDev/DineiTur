@@ -3,7 +3,8 @@ import "./AdminLogin.css";
 import { useNavigate } from "react-router-dom";
 import { 
   signInWithEmailAndPassword, 
-  sendPasswordResetEmail
+  sendPasswordResetEmail,
+  createUserWithEmailAndPassword
 } from "firebase/auth";
 import { auth, db } from "../../../firebase/firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
@@ -88,17 +89,33 @@ const AdminLogin = () => {
         return;
       }
       
-      await sendPasswordResetEmail(auth, email);
-      setSuccess("E-mail de redefinição enviado! Verifique sua caixa de entrada.");
+      try {
+        await sendPasswordResetEmail(auth, email);
+        setSuccess("E-mail de redefinição enviado! Verifique sua caixa de entrada e spam.");
+      } catch (resetErr) {
+        if (resetErr.code === 'auth/user-not-found') {
+          // Usuário não existe no Firebase Auth - criar com senha temporária
+          try {
+            const tempPassword = 'Temp@' + Math.random().toString(36).slice(2, 10) + '!2026';
+            await createUserWithEmailAndPassword(auth, email, tempPassword);
+            // Agora que o usuário existe, deslogar e enviar reset
+            await auth.signOut();
+            await sendPasswordResetEmail(auth, email);
+            setSuccess("Conta criada! E-mail de definição de senha enviado. Verifique sua caixa de entrada e spam.");
+          } catch (createErr) {
+            console.error('Erro ao criar usuário:', createErr);
+            setError("Erro ao criar conta. Tente novamente ou entre em contato com o suporte.");
+          }
+        } else {
+          console.error('Erro ao enviar reset:', resetErr);
+          setError("Erro ao enviar e-mail. Verifique o endereço digitado.");
+        }
+      }
       setLoading(false);
     } catch (err) {
       setLoading(false);
-      if (err.code === 'auth/user-not-found') {
-        // Se o usuário não existe no Firebase Auth, instrui a criar senha
-        setSuccess("Link de criação de senha enviado para seu email!");
-      } else {
-        setError("Erro ao enviar e-mail. Verifique o endereço digitado.");
-      }
+      console.error('Erro geral:', err);
+      setError("Erro ao processar. Tente novamente.");
     }
   };
 
