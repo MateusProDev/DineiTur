@@ -1,4 +1,4 @@
-import React, { useMemo, useEffect } from 'react';
+﻿import React, { useMemo, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import SEOHelmet from '../../components/SEOHelmet/SEOHelmet';
 import { seoData } from '../../utils/seoData';
@@ -27,7 +27,7 @@ const RouteSEO = () => {
       const parts = pathname.split('/').filter(Boolean);
       const slug = parts[1] || 'passeio';
       return (seoData.categorias && seoData.categorias[slug]) || {
-        title: `${slug} - Transfer Fortaleza Tur`,
+        title: `${slug} - DineiTur`,
         description: '',
         canonical: pathname
       };
@@ -35,7 +35,7 @@ const RouteSEO = () => {
 
     // Fallback: create sane defaults
     return {
-      title: `${seoData.home?.title || 'Transfer Fortaleza Tur'}`,
+      title: `${seoData.home?.title || 'DineiTur'}`,
       description: seoData.home?.description || '',
       canonical: pathname
     };
@@ -47,7 +47,7 @@ const RouteSEO = () => {
       const title = seoInfo.title || '';
       const description = seoInfo.description || '';
       if (title) {
-        const safeTitle = title.includes('Transfer Fortaleza Tur') ? title : `${title} | Transfer Fortaleza Tur`;
+        const safeTitle = title.includes('DineiTur') ? title : `${title} | DineiTur`;
         document.title = safeTitle;
       }
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import styles from './FooterUltraModern.module.css';
 import { db } from "../../firebase/firebase";
 import { doc, getDoc } from "firebase/firestore";
@@ -94,7 +94,7 @@ const FooterUltraModern = () => {
           <div className={cx('footer-brand-section')}>
             <Link to="/" className={cx('footer-logo-ultra')}>
               <FiGlobe className={cx('footer-logo-icon')} />
-              <h2>{footerData.companyName || "Transfer Fortaleza Tur"}</h2>
+              <h2>{footerData.companyName || "DineiTur"}</h2>
             </Link>
             <p className={cx('footer-tagline')}>
               {footerData.text || "Transformando sonhos em experiências inesquecíveis"}
@@ -233,7 +233,7 @@ const FooterUltraModern = () => {
         <div className={cx('footer-bottom-ultra')}>
           <div className={cx('footer-bottom-content-ultra')}>
             <p className={cx('footer-copyright-ultra')}>
-              &copy; {new Date().getFullYear()} <Link to="/" className={cx('footer-company-link')}>{footerData.companyName || "Transfer Fortaleza Tur"}</Link>. Todos os direitos reservados.
+              &copy; {new Date().getFullYear()} <Link to="/" className={cx('footer-company-link')}>{footerData.companyName || "DineiTur"}</Link>. Todos os direitos reservados.
             </p>
             <nav className={cx('footer-links-ultra')}>
               <Link to="/destinos">Destinos</Link> |{' '}

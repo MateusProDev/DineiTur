@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { collection, getDocs, query } from 'firebase/firestore';
 import { db } from '../../firebase/firebaseConfig';
@@ -63,7 +63,7 @@ const CategoriaPage = () => {
     if (categoria.includes('transfer')) return seoData.categorias.transfer;
     if (categoria === 'beach-park') return seoData.categorias['beach-park'];
     return {
-      title: `${categoriaInfo.nome} - Transfer Fortaleza Tur`,
+      title: `${categoriaInfo.nome} - DineiTur`,
       description: categoriaInfo.descricao,
       canonical: `/categoria/${categoria}`
     };
@@ -194,7 +194,7 @@ const CategoriaPage = () => {
   // Ensure document title and meta description are present even if Helmet doesn't update immediately
   useEffect(() => {
     try {
-      const title = seoInfo.title ? (seoInfo.title.includes('Transfer Fortaleza Tur') ? seoInfo.title : `${seoInfo.title} | Transfer Fortaleza Tur`) : 'Transfer Fortaleza Tur';
+      const title = seoInfo.title ? (seoInfo.title.includes('DineiTur') ? seoInfo.title : `${seoInfo.title} | DineiTur`) : 'DineiTur';
       document.title = title;
 
       const desc = seoInfo.description || '';

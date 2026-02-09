@@ -9,13 +9,13 @@ const SEOHelmet = ({
   title = '',
   description = '',
   canonical = '',
-  ogImage = 'https://res.cloudinary.com/dqejvdl8w/image/upload/v1762465385/logos/cz00p4dxeday83oadkwz.png',
+  ogImage = 'https://dineitur.com.br/android-chrome-512x512.png',
   ogType = 'website',
   noindex = false
 }) => {
-  const brand = 'Transfer Fortaleza Tur';
+  const brand = 'DineiTur';
   const envBase = process.env.REACT_APP_SITE_URL || '';
-  const baseUrl = envBase || 'https://transferfortalezatur.com.br';
+  const baseUrl = envBase || 'https://dineitur.com.br';
 
   // Safe handlers for missing props
   const safeTitle = String(title || '').trim();

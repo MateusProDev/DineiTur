@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import styles from './Header.module.css';
 import { Link } from 'react-router-dom';
@@ -301,7 +301,7 @@ const Header = () => {
               <FiPhone className={cx('nav-contact-icon')} />
               <span>Ligue para Nós</span>
             </a>
-            <a href="mailto:contato@transferfortalezatur.com.br" className={cx('nav-contact-item')}>
+            <a href="mailto:dineitur@gmail.com" className={cx('nav-contact-item')}>
               <FiMail className={cx('nav-contact-icon')} />
               <span>Envie um E-mail</span>
             </a>

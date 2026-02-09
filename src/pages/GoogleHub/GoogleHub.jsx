@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   FiPackage, 
@@ -63,7 +63,7 @@ const GoogleHub = () => {
             <span className="google-icon">G</span>
             <span>Vindos do Google</span>
           </div>
-          <h1>Bem-vindo à Transfer Fortaleza Tur!</h1>
+          <h1>Bem-vindo à DineiTur!</h1>
           <p>Escolha uma das opções abaixo para começar</p>
         </div>
 
@@ -97,7 +97,7 @@ const GoogleHub = () => {
               <FiPhone />
               <span>(85) 98877-6655</span>
             </a>
-            <a href="mailto:contato@transferfortalezatur.com.br" className="contact-btn email">
+            <a href="mailto:dineitur@gmail.com" className="contact-btn email">
               <FiMail />
               <span>Email</span>
             </a>

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import "./PoliticaPage.css";
 import SEOHelmet from '../../components/SEOHelmet/SEOHelmet';
 import { seoData } from '../../utils/seoData';
@@ -8,7 +8,7 @@ const PoliticaPage = () => {
     <>
       <SEOHelmet
         title={seoData.politica?.title || 'Política de Reservas e Cancelamento'}
-        description={seoData.politica?.description || 'Confira as regras de reservas, cancelamento e pagamento dos serviços da Transfer Fortaleza Tur.'}
+        description={seoData.politica?.description || 'Confira as regras de reservas, cancelamento e pagamento dos serviços da DineiTur.'}
         canonical={seoData.politica?.canonical || '/politica'}
         noindex={seoData.politica?.noindex}
       />
@@ -50,7 +50,7 @@ const PoliticaPage = () => {
           <section>
             <h2>4. Responsabilidades</h2>
             <ul>
-              <li>A Transfer Fortaleza Tur não se responsabiliza por pertences pessoais perdidos ou danificados.</li>
+              <li>A DineiTur não se responsabiliza por pertences pessoais perdidos ou danificados.</li>
               <li>O cliente deve informar condições médicas relevantes antes do passeio.</li>
               <li>Horários estão sujeitos a alterações devido a condições climáticas ou operacionais.</li>
               <li>A empresa se reserva o direito de recusar serviço a clientes sob efeito de álcool ou drogas.</li>
@@ -60,7 +60,7 @@ const PoliticaPage = () => {
           <section>
             <h2>5. Informações de Contato</h2>
             <p>
-              <strong>E-mail:</strong> contato@transferfortalezatur.com.br<br />
+              <strong>E-mail:</strong> dineitur@gmail.com<br />
               <strong>WhatsApp:</strong> +55 (85) 0000-0000<br />
               <strong>CNPJ:</strong> 00.000.000/0001-00
             </p>

@@ -1,4 +1,4 @@
-
+﻿
 import React from "react";
 import SEOHelmet from "../../components/SEOHelmet/SEOHelmet";
 import Footer from "../../components/Footer/Footer";
@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Falha = () => (
   <div className="falha-page" style={{textAlign: 'center', padding: '48px 16px'}}>
     <SEOHelmet 
-      title="Página não encontrada - Transfer Fortaleza Tur"
+      title="Página não encontrada - DineiTur"
       description="A página que você tentou acessar não existe ou foi removida. Volte para a Home ou navegue pelos nossos pacotes e destinos."
       canonical="/404"
     />

@@ -1,4 +1,4 @@
-// src/pages/BlogPage/BlogPage.jsx
+﻿// src/pages/BlogPage/BlogPage.jsx
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
@@ -96,7 +96,7 @@ const BlogPage = () => {
       <div className="blog-page">
         <div className="blog-hero">
           <div className="blog-hero-content">
-            <h1>Blog Transfer Fortaleza Tur</h1>
+            <h1>Blog DineiTur</h1>
             <p>Descubra os melhores destinos e dicas para sua próxima aventura</p>
           </div>
         </div>

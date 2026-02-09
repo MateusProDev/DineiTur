@@ -11,7 +11,7 @@ Allow: /android-icon-*.png
 Allow: /apple-icon-*.png
 
 # Sitemap
-Sitemap: https://transferfortalezatur.com.br/sitemap.xml
+Sitemap: https://dineitur.com.br/sitemap.xml
 
 # Disallow admin pages
 Disallow: /admin/

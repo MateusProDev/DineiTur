@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
@@ -166,7 +166,7 @@ const TransferChegadaSaidaPage = () => {
   return (
     <div className="formulario-page">
       <SEOHelmet
-        title="Transfer Chegada e Saída - Transfer Fortaleza Tur"
+        title="Transfer Chegada e Saída - DineiTur"
         description="Reserve transfer de chegada e saída em Fortaleza. Serviço completo para sua viagem, com conforto e agilidade."
         noindex={true}
       />
@@ -177,7 +177,7 @@ const TransferChegadaSaidaPage = () => {
           </button>
           {logoUrl && (
             <div className="form-logo">
-              <img src={logoUrl} alt="Transfer Fortaleza Tur Logo" />
+              <img src={logoUrl} alt="DineiTur Logo" />
             </div>
           )}
         </div>

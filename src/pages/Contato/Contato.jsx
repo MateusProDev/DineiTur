@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import './Contato.css';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -110,7 +110,7 @@ const Contato = () => {
 
     // Montar mensagem para WhatsApp
     const mensagemWhatsApp = encodeURIComponent(
-      `*Nova solicitação de contato - Transfer Fortaleza Tur*\n\n` +
+      `*Nova solicitação de contato - DineiTur*\n\n` +
       `*Nome:* ${formData.nome}\n` +
       `*Email:* ${formData.email || 'Não informado'}\n` +
       `*Telefone:* ${formData.telefone || 'Não informado'}\n\n` +

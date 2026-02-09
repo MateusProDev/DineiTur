@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { db } from "../../../firebase/firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import "./EditFooter.css";
@@ -287,7 +287,7 @@ const EditFooter = () => {
                         contact: { ...prev.contact, email: e.target.value },
                       }))
                     }
-                    placeholder="contato@transferfortalezatur.com.br"
+                    placeholder="dineitur@gmail.com"
                   />
                 </div>
               </div>

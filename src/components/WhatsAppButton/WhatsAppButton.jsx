@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import "./WhatsAppButton.css";
 import { db } from "../../firebase/firebase"; // Importe sua configuração do Firebase
 import { doc, getDoc } from "firebase/firestore";
@@ -33,7 +33,7 @@ const WhatsAppButton = () => {
   if (loading) return null; // Removido <p>Carregando...</p> para não atrasar renderização
   if (error) return null; // Removido <p>{error}</p> para não mostrar erro visual
 
-  const message = "Olá, gostaria de saber mais sobre os pacotes de turismo da Transfer Fortaleza Tur.";
+  const message = "Olá, gostaria de saber mais sobre os pacotes de turismo da DineiTur.";
   const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (

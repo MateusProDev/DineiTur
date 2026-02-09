@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import "./ModalSucessoReserva.css";
 
 
@@ -25,7 +25,7 @@ export default function ModalSucessoReserva({ isOpen, onClose, reservaId }) {
             <span style={{ color: '#e67e22' }}>Verifique também a caixa de spam.</span>
           </p>
           <div style={{ textAlign: 'center', margin: '1.2rem 0' }}>
-            <span style={{ fontSize: '1.2rem', color: '#1a4d7a', fontWeight: 600 }}>Obrigado por escolher a Transfer Fortaleza Tur!</span>
+            <span style={{ fontSize: '1.2rem', color: '#1a4d7a', fontWeight: 600 }}>Obrigado por escolher a DineiTur!</span>
             <br />
             <span style={{ color: '#27ae60', fontSize: '1rem' }}>Em breve entraremos em contato para confirmar os detalhes.</span>
           </div>

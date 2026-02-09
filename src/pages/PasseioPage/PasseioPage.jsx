@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+﻿import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useNavigate } from "react-router-dom";
@@ -142,7 +142,7 @@ const PasseioPage = () => {
   return (
     <div className="formulario-page">
       <SEOHelmet
-        title="Reserva de Passeio - Transfer Fortaleza Tur"
+        title="Reserva de Passeio - DineiTur"
         description="Reserve passeios turísticos exclusivos em Fortaleza e região. Escolha entre pacotes, eventos ou outros tipos de passeio."
         noindex={true}
       />
@@ -153,7 +153,7 @@ const PasseioPage = () => {
           </button>
           {logoUrl && (
             <div className="form-logo">
-              <img src={logoUrl} alt="Transfer Fortaleza Tur Logo" />
+              <img src={logoUrl} alt="DineiTur Logo" />
             </div>
           )}
         </div>
