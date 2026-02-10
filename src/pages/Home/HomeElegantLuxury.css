@@ -1516,4 +1516,34 @@ html {
     padding: 1rem;
     min-width: 80px;
   }
+  
+  /* Garantir visibilidade das seções de pacotes e serviços em mobile */
+  .highlights-section,
+  .services-elegant-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  .elegant-carousels {
+    display: flex !important;
+    visibility: visible !important;
+  }
+  
+  .carousel-section-elegant {
+    display: block !important;
+    visibility: visible !important;
+    padding: 1.5rem !important;
+  }
+  
+  .services-grid-elegant {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    visibility: visible !important;
+  }
+  
+  .service-card-elegant {
+    display: block !important;
+    visibility: visible !important;
+  }
 }
