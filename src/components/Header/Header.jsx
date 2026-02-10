@@ -49,26 +49,24 @@ const Header = () => {
   useEffect(() => {
     const fetchHeaderData = async () => {
       try {
-        const headerRef = doc(db, 'content', 'header');
-        const headerDoc = await getDoc(headerRef);
+        // Buscar tudo em paralelo com Promise.allSettled para resiliência
+        const [headerResult, whatsappResult, footerResult] = await Promise.allSettled([
+          getDoc(doc(db, 'content', 'header')),
+          getDoc(doc(db, 'settings', 'whatsapp')),
+          getDoc(doc(db, 'content', 'footer'))
+        ]);
 
-        if (headerDoc.exists()) {
-          const url = headerDoc.data().logoUrl;
+        if (headerResult.status === 'fulfilled' && headerResult.value.exists()) {
+          const url = headerResult.value.data().logoUrl;
           setLogoUrl(url);
         }
 
-        // Buscar número do WhatsApp
-        const whatsappRef = doc(db, 'settings', 'whatsapp');
-        const whatsappDoc = await getDoc(whatsappRef);
-        if (whatsappDoc.exists()) {
-          setWhatsappNumber(whatsappDoc.data().number || '5511999999999');
+        if (whatsappResult.status === 'fulfilled' && whatsappResult.value.exists()) {
+          setWhatsappNumber(whatsappResult.value.data().number || '5511999999999');
         }
 
-        // Buscar redes sociais do footer
-        const footerRef = doc(db, 'content', 'footer');
-        const footerDoc = await getDoc(footerRef);
-        if (footerDoc.exists() && footerDoc.data().social) {
-          setSocialMedia(footerDoc.data().social);
+        if (footerResult.status === 'fulfilled' && footerResult.value.exists() && footerResult.value.data().social) {
+          setSocialMedia(footerResult.value.data().social);
         }
       } catch (error) {
         console.error('Erro ao buscar dados do header:', error);

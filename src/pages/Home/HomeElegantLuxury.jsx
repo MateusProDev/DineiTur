@@ -41,16 +41,25 @@ const HomeElegantLuxury = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // Buscar WhatsApp
-        const whatsappDoc = await getDoc(doc(db, 'settings', 'whatsapp'));
-        if (whatsappDoc.exists()) {
-          setWhatsappNumber(whatsappDoc.data().number || '');
+        // Buscar TUDO em paralelo com Promise.allSettled
+        // Se um falhar, os outros continuam normalmente
+        const [whatsappResult, servicesResult, whyChooseResult, pacotesResult, avaliacoesResult] = 
+          await Promise.allSettled([
+            getDoc(doc(db, 'settings', 'whatsapp')),
+            getDoc(doc(db, 'content', 'servicesSection')),
+            getDoc(doc(db, 'content', 'whyChooseSection')),
+            getDocs(collection(db, 'pacotes')),
+            getDocs(collection(db, 'avaliacoes'))
+          ]);
+
+        // 1. WhatsApp (se falhar, usa fallback)
+        if (whatsappResult.status === 'fulfilled' && whatsappResult.value.exists()) {
+          setWhatsappNumber(whatsappResult.value.data().number || '');
         }
 
-        // Buscar Serviços do Firestore
-        const servicesDoc = await getDoc(doc(db, 'content', 'servicesSection'));
-        if (servicesDoc.exists() && servicesDoc.data().services) {
-          setServices(servicesDoc.data().services);
+        // 2. Serviços
+        if (servicesResult.status === 'fulfilled' && servicesResult.value.exists() && servicesResult.value.data().services) {
+          setServices(servicesResult.value.data().services);
         } else {
           // Fallback para dados estáticos elegantes
           setServices([
@@ -75,10 +84,9 @@ const HomeElegantLuxury = () => {
           ]);
         }
 
-        // Buscar Why Choose Us do Firestore
-        const whyChooseDoc = await getDoc(doc(db, 'content', 'whyChooseSection'));
-        if (whyChooseDoc.exists() && whyChooseDoc.data().features) {
-          setWhyChooseUsData(whyChooseDoc.data().features);
+        // 3. Why Choose Us
+        if (whyChooseResult.status === 'fulfilled' && whyChooseResult.value.exists() && whyChooseResult.value.data().features) {
+          setWhyChooseUsData(whyChooseResult.value.data().features);
         } else {
           setWhyChooseUsData([
             {
@@ -104,76 +112,78 @@ const HomeElegantLuxury = () => {
           ]);
         }
 
-        // Buscar Pacotes (sem orderBy para evitar necessidade de índice)
-        const pacotesSnapshot = await getDocs(collection(db, 'pacotes'));
-        const pacotesData = pacotesSnapshot.docs.map(d => ({
-          id: d.id,
-          ...d.data()
-        }));
+        // 4. Pacotes
+        if (pacotesResult.status === 'fulfilled') {
+          const pacotesData = pacotesResult.value.docs.map(d => ({
+            id: d.id,
+            ...d.data()
+          }));
 
-        // Ordenar no código por createdAt desc
-        pacotesData.sort((a, b) => {
-          const aTime = a.createdAt?.seconds || a.createdAt || 0;
-          const bTime = b.createdAt?.seconds || b.createdAt || 0;
-          return bTime - aTime;
-        });
-        
-        // Agrupar pacotes
-        const passeios = [];
-        const transfers = [];
-        
-        pacotesData.forEach(pacote => {
-          const categoriaPrincipal = pacote.categoria || 'passeio';
-          const categoriasAdicionais = pacote.categorias || [];
-          
-          if (categoriaPrincipal === 'passeio' || categoriasAdicionais.includes('passeio')) {
-            if (!passeios.find(p => p.id === pacote.id)) {
-              passeios.push(pacote);
-            }
-          }
-          
-          const isTransfer = categoriaPrincipal.includes('transfer') || 
-                            categoriasAdicionais.some(cat => cat.includes('transfer'));
-          
-          if (isTransfer) {
-            if (!transfers.find(p => p.id === pacote.id)) {
-              transfers.push(pacote);
-            }
-          }
-        });
-        
-        // Limitar a 4 pacotes por categoria para design minimalista
-        let passeiosLimitados = passeios.filter(p => p.destaque === true).slice(0, 4);
-        let transfersLimitados = transfers.filter(p => p.destaque === true).slice(0, 4);
-        
-        if (passeiosLimitados.length === 0 && passeios.length > 0) {
-          passeiosLimitados = passeios.slice(0, 4);
-        }
-        if (transfersLimitados.length === 0 && transfers.length > 0) {
-          transfersLimitados = transfers.slice(0, 4);
-        }
-        
-        const grouped = {};
-        if (passeiosLimitados.length > 0) {
-          grouped['passeio'] = passeiosLimitados;
-        }
-        if (transfersLimitados.length > 0) {
-          grouped['transfers'] = transfersLimitados;
-        }
-        
-        setPacotesPorCategoria(grouped);
-        
-        // Buscar Avaliações (sem orderBy para evitar necessidade de índice)
-        const avaliacoesSnapshot = await getDocs(collection(db, 'avaliacoes'));
-        const avaliacoesData = avaliacoesSnapshot.docs
-          .map(d => ({ id: d.id, ...d.data() }))
-          .sort((a, b) => {
+          // Ordenar no código por createdAt desc
+          pacotesData.sort((a, b) => {
             const aTime = a.createdAt?.seconds || a.createdAt || 0;
             const bTime = b.createdAt?.seconds || b.createdAt || 0;
             return bTime - aTime;
-          })
-          .slice(0, 5);
-        setAvaliacoes(avaliacoesData);
+          });
+          
+          // Agrupar pacotes
+          const passeios = [];
+          const transfers = [];
+          
+          pacotesData.forEach(pacote => {
+            const categoriaPrincipal = pacote.categoria || 'passeio';
+            const categoriasAdicionais = pacote.categorias || [];
+            
+            if (categoriaPrincipal === 'passeio' || categoriasAdicionais.includes('passeio')) {
+              if (!passeios.find(p => p.id === pacote.id)) {
+                passeios.push(pacote);
+              }
+            }
+            
+            const isTransfer = categoriaPrincipal.includes('transfer') || 
+                              categoriasAdicionais.some(cat => cat.includes('transfer'));
+            
+            if (isTransfer) {
+              if (!transfers.find(p => p.id === pacote.id)) {
+                transfers.push(pacote);
+              }
+            }
+          });
+          
+          // Limitar a 4 pacotes por categoria para design minimalista
+          let passeiosLimitados = passeios.filter(p => p.destaque === true).slice(0, 4);
+          let transfersLimitados = transfers.filter(p => p.destaque === true).slice(0, 4);
+          
+          if (passeiosLimitados.length === 0 && passeios.length > 0) {
+            passeiosLimitados = passeios.slice(0, 4);
+          }
+          if (transfersLimitados.length === 0 && transfers.length > 0) {
+            transfersLimitados = transfers.slice(0, 4);
+          }
+          
+          const grouped = {};
+          if (passeiosLimitados.length > 0) {
+            grouped['passeio'] = passeiosLimitados;
+          }
+          if (transfersLimitados.length > 0) {
+            grouped['transfers'] = transfersLimitados;
+          }
+          
+          setPacotesPorCategoria(grouped);
+        }
+        
+        // 5. Avaliações
+        if (avaliacoesResult.status === 'fulfilled') {
+          const avaliacoesData = avaliacoesResult.value.docs
+            .map(d => ({ id: d.id, ...d.data() }))
+            .sort((a, b) => {
+              const aTime = a.createdAt?.seconds || a.createdAt || 0;
+              const bTime = b.createdAt?.seconds || b.createdAt || 0;
+              return bTime - aTime;
+            })
+            .slice(0, 5);
+          setAvaliacoes(avaliacoesData);
+        }
 
       } catch (error) {
         console.error('Erro ao buscar dados:', error);

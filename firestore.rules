@@ -90,9 +90,9 @@ service cloud.firestore {
       allow read: if isAdmin();
     }
 
-    // Settings do sistema - somente admin
+    // Settings do sistema - leitura pública (whatsapp, configs do site), escrita admin
     match /settings/{docId} {
-      allow read: if isAdmin();
+      allow read: if true;
       allow write: if isAdmin();
     }
 
