@@ -161,6 +161,12 @@ const HomeElegantLuxury = () => {
           grouped['transfers'] = transfersLimitados;
         }
         
+        console.log('🎯 PACOTES AGRUPADOS PARA HOME:', {
+          passeios: passeiosLimitados.length,
+          transfers: transfersLimitados.length,
+          grouped
+        });
+        
         setPacotesPorCategoria(grouped);
         
         // Buscar Avaliações (sem orderBy para evitar necessidade de índice)
