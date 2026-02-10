@@ -204,7 +204,7 @@ const HomeElegantLuxury = () => {
 
   const handleWhatsApp = (message = '') => {
     const encodedMessage = encodeURIComponent(message);
-    const number = whatsappNumber || '5511999999999';
+    const number = whatsappNumber || '5585986435640';
     window.open(`https://wa.me/${number}?text=${encodedMessage}`, '_blank');
   };
 

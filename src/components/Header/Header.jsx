@@ -62,7 +62,7 @@ const Header = () => {
         }
 
         if (whatsappResult.status === 'fulfilled' && whatsappResult.value.exists()) {
-          setWhatsappNumber(whatsappResult.value.data().number || '5511999999999');
+          setWhatsappNumber(whatsappResult.value.data().number || '5585986435640');
         }
 
         if (footerResult.status === 'fulfilled' && footerResult.value.exists() && footerResult.value.data().social) {

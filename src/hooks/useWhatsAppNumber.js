@@ -16,12 +16,12 @@ export const useWhatsAppNumber = () => {
           setPhoneNumber(docSnap.data().number || "");
         } else {
           // Fallback para um número padrão se não encontrar no Firebase
-          setPhoneNumber("5511999999999");
+          setPhoneNumber("5585986435640");
         }
       } catch (err) {
         console.error("Erro ao carregar número do WhatsApp:", err);
         // Fallback para um número padrão em caso de erro
-        setPhoneNumber("5511999999999");
+        setPhoneNumber("5585986435640");
       } finally {
         setLoading(false);
       }

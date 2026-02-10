@@ -85,7 +85,7 @@ src/components/OrientacoesReservaModal/
 ## 🎯 Integrações
 
 ### WhatsApp Business
-- Número configurável: `5511999999999`
+- Número configurável: `5585986435640`
 - Mensagem automática com dados da reserva
 - Abertura em nova aba
 

@@ -249,7 +249,7 @@ const AboutPage = () => {
                 </Link>
                 {whatsappNumber && (
                   <a
-                    href={`https://wa.me/55${whatsappNumber.replace(/\D/g, "")}`}
+                    href={`https://wa.me/${whatsappNumber.replace(/\D/g, "")}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="about-btn-whatsapp"

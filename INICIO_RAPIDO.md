@@ -11,7 +11,7 @@ cp .env.reservas.example .env.local
 # Adicione suas configurações (mínimo):
 REACT_APP_FIREBASE_PROJECT_ID=seu-projeto-aqui
 REACT_APP_AGENCY_EMAIL=contato@maiatur.com.br
-REACT_APP_AGENCY_PHONE_WHATS=558500000000
+REACT_APP_AGENCY_PHONE_WHATS=5585986435640
 ```
 
 ### 2. Inicie o App (30s)

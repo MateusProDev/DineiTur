@@ -47,7 +47,7 @@ Sistema de reservas online funcional e integrado ao projeto Maiatur existente, *
 ```env
 REACT_APP_FIREBASE_PROJECT_ID=seu-projeto
 REACT_APP_AGENCY_EMAIL=contato@maiatur.com.br
-REACT_APP_AGENCY_PHONE_WHATS=558500000000
+REACT_APP_AGENCY_PHONE_WHATS=5585986435640
 ```
 
 ### 2. Inicialize o sistema

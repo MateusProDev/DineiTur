@@ -120,7 +120,7 @@ const Contato = () => {
 
     // Abrir WhatsApp com a mensagem
     const whatsappNumber = contactData.whatsapp.replace(/\D/g, '');
-    const whatsappUrl = `https://wa.me/55${whatsappNumber}?text=${mensagemWhatsApp}`;
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${mensagemWhatsApp}`;
     
     window.open(whatsappUrl, '_blank');
     
@@ -162,7 +162,7 @@ const Contato = () => {
                   <h3>WhatsApp</h3>
                   <p>{contactData.whatsapp}</p>
                   <a 
-                    href={`https://wa.me/55${contactData.whatsapp.replace(/\D/g, '')}`}
+                    href={`https://wa.me/${contactData.whatsapp.replace(/\D/g, '')}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="whatsapp-link"
