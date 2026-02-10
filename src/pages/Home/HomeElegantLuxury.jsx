@@ -215,38 +215,67 @@ const HomeElegantLuxury = () => {
         <div className="hero-overlay"></div>
       </section>
 
-      {/* Seção de Destaques */}
-      <section className="highlights-section">
-        <div className="container-elegant">
-          <div className="section-header-elegant">
-            <h2>
-              <span className="section-prefix">Destinos Selecionados</span>
-              <span className="section-title-main">Para Momentos Únicos</span>
+      {/* Seção de Destaques - INLINE STYLES para garantir visibilidade em QUALQUER dispositivo */}
+      <section 
+        className="highlights-section"
+        style={{ 
+          display: 'block', 
+          visibility: 'visible', 
+          opacity: 1, 
+          padding: '4rem 0', 
+          background: '#f8fafc',
+          overflow: 'visible',
+          maxHeight: 'none',
+          height: 'auto',
+          position: 'relative',
+          zIndex: 1
+        }}
+      >
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 1rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', fontWeight: 300, color: '#273966', marginBottom: '1rem' }}>
+              <span style={{ display: 'block', fontSize: '0.8em', color: '#2482A6', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '0.5rem' }}>Destinos Selecionados</span>
+              <span style={{ display: 'block', fontWeight: 600 }}>Para Momentos Únicos</span>
             </h2>
-            <p className="section-description-elegant">
+            <p style={{ fontSize: '1.1rem', color: '#9294A0', lineHeight: 1.6, maxWidth: '600px', margin: '0 auto' }}>
               Coleção cuidadosamente selecionada de experiências que transcendem o comum
             </p>
           </div>
 
           {loading ? (
-            <div className="loading-minimalist">
-              <div className="loading-dots">
-                <div></div><div></div><div></div>
+            <div style={{ textAlign: 'center', padding: '4rem 0' }}>
+              <div style={{ display: 'flex', justifyContent: 'center', gap: '0.5rem' }}>
+                <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#2482A6', animation: 'loadingPulse 1.4s ease-in-out infinite both', animationDelay: '-0.32s' }}></div>
+                <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#2482A6', animation: 'loadingPulse 1.4s ease-in-out infinite both', animationDelay: '-0.16s' }}></div>
+                <div style={{ width: 12, height: 12, borderRadius: '50%', background: '#2482A6', animation: 'loadingPulse 1.4s ease-in-out infinite both' }}></div>
               </div>
             </div>
           ) : Object.keys(pacotesPorCategoria).length === 0 ? (
-            <div className="empty-state-elegant">
-              <FaRegGem />
-              <h3>Novas experiências em preparação</h3>
+            <div style={{ textAlign: 'center', padding: '4rem 2rem', color: '#9294A0' }}>
+              <FaRegGem style={{ fontSize: '4rem', marginBottom: '1rem', color: '#2482A6' }} />
+              <h3 style={{ fontSize: '1.5rem', color: '#273966', marginBottom: '0.5rem' }}>Novas experiências em preparação</h3>
               <p>Estamos selecionando destinos excepcionais para você</p>
             </div>
           ) : (
-            <div className="elegant-carousels">
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem', visibility: 'visible', opacity: 1 }}>
               {Object.entries(pacotesPorCategoria).map(([categoria, pacotesCategoria]) => (
-                <div key={categoria} className="carousel-section-elegant">
-                  <div className="carousel-header">
-                    <h3>{categorias[categoria] || categoria}</h3>
-                    <Link to="/pacotes" className="view-all-link">
+                <div 
+                  key={categoria} 
+                  style={{ 
+                    background: '#ffffff', 
+                    borderRadius: '16px', 
+                    padding: window.innerWidth <= 768 ? '1rem' : '2rem', 
+                    boxShadow: '0 4px 20px rgba(36,130,166,0.1)', 
+                    border: '1px solid rgba(36,130,166,0.1)',
+                    display: 'block',
+                    visibility: 'visible',
+                    opacity: 1,
+                    overflow: 'visible'
+                  }}
+                >
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1.5rem', paddingBottom: '1rem', borderBottom: '1px solid rgba(36,130,166,0.1)', flexWrap: 'wrap', gap: '0.5rem' }}>
+                    <h3 style={{ fontSize: 'clamp(1.2rem, 3vw, 1.8rem)', fontWeight: 600, color: '#273966', margin: 0 }}>{categorias[categoria] || categoria}</h3>
+                    <Link to="/pacotes" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#2482A6', textDecoration: 'none', fontWeight: 600 }}>
                       Ver todos <FiArrowRight />
                     </Link>
                   </div>
@@ -263,44 +292,64 @@ const HomeElegantLuxury = () => {
         </div>
       </section>
 
-      {/* Serviços Premium */}
-      <section className="services-elegant-section">
-        <div className="container-elegant">
-          <div className="section-header-elegant center">
-            <h2>
-              <span className="section-prefix">Nossos Serviços</span>
-              <span className="section-title-main">Excelência em Cada Etapa</span>
+      {/* Serviços Premium - INLINE STYLES para garantir visibilidade */}
+      <section 
+        className="services-elegant-section"
+        style={{ 
+          display: 'block', 
+          visibility: 'visible', 
+          opacity: 1, 
+          padding: '4rem 0', 
+          background: '#ffffff',
+          overflow: 'visible',
+          maxHeight: 'none',
+          height: 'auto',
+          position: 'relative',
+          zIndex: 1
+        }}
+      >
+        <div style={{ maxWidth: '1400px', margin: '0 auto', padding: '0 1rem' }}>
+          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
+            <h2 style={{ fontSize: 'clamp(1.5rem, 4vw, 3rem)', fontWeight: 300, color: '#273966', marginBottom: '1rem' }}>
+              <span style={{ display: 'block', fontSize: '0.8em', color: '#2482A6', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '2px', marginBottom: '0.5rem' }}>Nossos Serviços</span>
+              <span style={{ display: 'block', fontWeight: 600 }}>Excelência em Cada Etapa</span>
             </h2>
           </div>
 
-          <div className="services-grid-elegant">
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(300px, 100%), 1fr))', gap: '2rem', marginTop: '2rem', visibility: 'visible', opacity: 1 }}>
             {services.map((service, index) => (
               <div 
                 key={service.id || index} 
-                className="service-card-elegant"
-                data-aos="fade-up"
-                data-aos-delay={index * 100}
+                style={{
+                  background: '#ffffff',
+                  borderRadius: '16px',
+                  overflow: 'hidden',
+                  boxShadow: '0 4px 20px rgba(36,130,166,0.1)',
+                  border: '1px solid rgba(36,130,166,0.1)',
+                  display: 'block',
+                  visibility: 'visible',
+                  opacity: 1
+                }}
               >
-                <div className="service-image-container">
+                <div style={{ position: 'relative', height: window.innerWidth <= 768 ? '180px' : '250px', overflow: 'hidden' }}>
                   <img 
                     src={autoOptimize(service.image, 'elegantService')}
                     alt={service.title}
-                    className="service-image-elegant"
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                     loading="lazy"
                   />
-                  <div className="service-overlay-elegant"></div>
-                  <div className="service-index">0{index + 1}</div>
+                  <div style={{ position: 'absolute', top: '1.5rem', right: '1.5rem', background: '#fff', color: '#2482A6', fontSize: '1.2rem', fontWeight: 700, padding: '0.5rem 1rem', borderRadius: '12px' }}>0{index + 1}</div>
                 </div>
                 
-                <div className="service-content-elegant">
-                  <h3 className="service-title-elegant">{service.title}</h3>
-                  <p className="service-description-elegant">{service.description}</p>
+                <div style={{ padding: window.innerWidth <= 768 ? '1.25rem' : '2rem' }}>
+                  <h3 style={{ fontSize: '1.3rem', fontWeight: 600, color: '#273966', marginBottom: '0.75rem' }}>{service.title}</h3>
+                  <p style={{ color: '#9294A0', lineHeight: 1.6, marginBottom: '1rem', fontSize: '0.95rem' }}>{service.description}</p>
                   
                   {service.features && (
-                    <ul className="service-features">
+                    <ul style={{ listStyle: 'none', marginBottom: '1.5rem', padding: 0 }}>
                       {service.features.map((feature, fIndex) => (
-                        <li key={fIndex}>
-                          <FiCheckCircle />
+                        <li key={fIndex} style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem', color: '#273966', fontSize: '0.9rem' }}>
+                          <FiCheckCircle style={{ color: '#2482A6', flexShrink: 0 }} />
                           <span>{feature}</span>
                         </li>
                       ))}
@@ -316,7 +365,7 @@ const HomeElegantLuxury = () => {
                         window.open(url, '_blank');
                       }
                     }}
-                    className="service-cta-elegant"
+                    style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.5rem', background: 'linear-gradient(135deg, #2482A6 0%, #273966 100%)', color: '#fff', padding: '0.75rem 1.5rem', borderRadius: '12px', border: 'none', fontWeight: 600, cursor: 'pointer', width: '100%', fontSize: '1rem' }}
                   >
                     <span>Solicitar Detalhes</span>
                     <IoMdArrowRoundForward />

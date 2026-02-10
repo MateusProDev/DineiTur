@@ -1,14 +1,12 @@
 /* eslint-disable no-restricted-globals */
 
-const CACHE_NAME = 'maiatur-v1';
-const CACHE_DURATION = 90 * 60 * 1000; // 90 minutos
+const CACHE_NAME = 'dineitur-v3';
+const CACHE_DURATION = 30 * 60 * 1000; // 30 minutos
 
-// Assets para cache imediato
+// Assets para cache imediato - apenas os essenciais
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/static/css/main.css',
-  '/static/js/main.js',
   '/favicon.ico',
   '/manifest.json'
 ];

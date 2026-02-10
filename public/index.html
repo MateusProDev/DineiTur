@@ -181,6 +181,21 @@
   </head>
   <body>
     <noscript>Você precisa habilitar o JavaScript para usar este aplicativo.</noscript>
+    <script>
+      // Forçar limpeza de Service Worker e cache antigo
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+          registrations.forEach(function(registration) {
+            registration.unregister();
+          });
+        });
+        caches.keys().then(function(names) {
+          names.forEach(function(name) {
+            caches.delete(name);
+          });
+        });
+      }
+    </script>
     <script async defer src="https://apis.google.com/js/api.js"></script>
     <div id="root"></div>
   </body>
