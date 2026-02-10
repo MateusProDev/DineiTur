@@ -424,12 +424,20 @@
     gap: 0 !important;
   }
   
+  .carousel-card {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
   .carousel-card-image {
     height: 180px !important;
+    display: block !important;
   }
   
   .carousel-card-content {
     padding: 1.25rem !important;
+    display: block !important;
   }
   
   .carousel-price-current {
@@ -446,8 +454,16 @@
     font-size: 1rem !important;
   }
   
+  .carousel-card {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    min-height: 380px !important;
+  }
+  
   .carousel-card-image {
     height: 160px !important;
+    display: block !important;
   }
   
   .carousel-card-title {
@@ -460,5 +476,6 @@
   
   .carousel-track {
     gap: 0 !important;
+    display: flex !important;
   }
 }
