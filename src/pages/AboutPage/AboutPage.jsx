@@ -13,7 +13,7 @@ import "./AboutPage.css";
 
 const AboutPage = () => {
   const [aboutData, setAboutData] = useState({
-    description: "",
+    description: "", 
     aboutCarousel: { images: [] },
   });
   const [currentSlide, setCurrentSlide] = useState(0);
