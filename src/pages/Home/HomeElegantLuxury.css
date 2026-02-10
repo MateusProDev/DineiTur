@@ -60,6 +60,19 @@
   --spacing-xl: 3rem;
   --spacing-2xl: 4rem;
   --spacing-3xl: 6rem;
+
+  /* Cores base (fallbacks) */
+  --white: #ffffff;
+  --light-bg: #f8fafc;
+  --color-white: #ffffff;
+
+  /* Raios e sombras (fallbacks) */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --shadow-elegant: 0 8px 32px rgba(36, 130, 166, 0.12);
+  --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Reset e base */
@@ -337,7 +350,7 @@
 /* Serviços */
 .services-grid-ultra {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: var(--spacing-2xl);
   margin-top: var(--spacing-3xl);
 }
@@ -946,7 +959,7 @@ html {
 
 .services-grid-elegant {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: 2rem;
   margin-top: 4rem;
 }
@@ -1209,7 +1222,7 @@ html {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: 2rem;
 }
 
@@ -1481,7 +1494,10 @@ html {
   }
 
   .services-grid-elegant {
-    grid-template-columns: 1fr;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 
   .testimonials-grid {
@@ -1490,6 +1506,69 @@ html {
 
   .cta-buttons-elegant {
     flex-direction: column;
+  }
+
+  /* FORÇAR VISIBILIDADE DE TODAS AS SEÇÕES EM MOBILE */
+  .highlights-section,
+  .services-elegant-section,
+  .why-choose-elegant,
+  .testimonials-elegant,
+  .cta-elegant-final {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    max-height: none !important;
+    height: auto !important;
+  }
+
+  .elegant-carousels {
+    display: flex !important;
+    flex-direction: column !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    gap: 2rem !important;
+  }
+
+  .carousel-section-elegant {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    padding: 1.5rem !important;
+    overflow: visible !important;
+  }
+
+  .service-card-elegant {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+
+  .section-header-elegant,
+  .section-header-elegant h2,
+  .section-prefix,
+  .section-title-main,
+  .section-description-elegant {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .highlights-section {
+    padding: 3rem 0 !important;
+  }
+
+  .services-elegant-section {
+    padding: 3rem 0 !important;
+  }
+
+  .service-image-container {
+    height: 200px !important;
+  }
+
+  .why-choose-image {
+    height: 300px;
   }
 }
 

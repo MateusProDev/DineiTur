@@ -111,15 +111,6 @@ const HomeElegantLuxury = () => {
           ...d.data()
         }));
 
-        console.log('📦 TOTAL DE PACOTES CARREGADOS DO FIRESTORE:', pacotesData.length);
-        console.log('📦 Primeiros 3 pacotes:', pacotesData.slice(0, 3).map(p => ({
-          id: p.id,
-          titulo: p.titulo,
-          categoria: p.categoria,
-          categorias: p.categorias,
-          destaque: p.destaque
-        })));
-
         // Ordenar no código por createdAt desc
         pacotesData.sort((a, b) => {
           const aTime = a.createdAt?.seconds || a.createdAt || 0;
@@ -151,27 +142,15 @@ const HomeElegantLuxury = () => {
           }
         });
         
-        console.log('🔍 APÓS AGRUPAMENTO:', {
-          totalPasseios: passeios.length,
-          totalTransfers: transfers.length
-        });
-        
         // Limitar a 4 pacotes por categoria para design minimalista
         let passeiosLimitados = passeios.filter(p => p.destaque === true).slice(0, 4);
         let transfersLimitados = transfers.filter(p => p.destaque === true).slice(0, 4);
         
-        console.log('⭐ FILTRADOS POR DESTAQUE:', {
-          passeiosDestaque: passeiosLimitados.length,
-          transfersDestaque: transfersLimitados.length
-        });
-        
         if (passeiosLimitados.length === 0 && passeios.length > 0) {
           passeiosLimitados = passeios.slice(0, 4);
-          console.log('🔄 Sem passeios destaque, pegando primeiros 4');
         }
         if (transfersLimitados.length === 0 && transfers.length > 0) {
           transfersLimitados = transfers.slice(0, 4);
-          console.log('🔄 Sem transfers destaque, pegando primeiros 4');
         }
         
         const grouped = {};
@@ -181,12 +160,6 @@ const HomeElegantLuxury = () => {
         if (transfersLimitados.length > 0) {
           grouped['transfers'] = transfersLimitados;
         }
-        
-        console.log('🎯 PACOTES AGRUPADOS PARA HOME:', {
-          passeios: passeiosLimitados.length,
-          transfers: transfersLimitados.length,
-          grouped
-        });
         
         setPacotesPorCategoria(grouped);
         
