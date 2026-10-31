@@ -264,7 +264,7 @@ const AboutPage = () => {
                 className="about-qr-image"
               />
               <p className="about-qr-credit">
-                QR Code gerado com <strong>Lucrazi</strong>
+                QR Code gerado com <a href="https://www.lucrazi.com.br" target="_blank" rel="noopener noreferrer" className="about-lucrazi-link">Lucrazi</a>
               </p>
             </div>
           </div>

@@ -478,9 +478,17 @@
   margin: 0;
 }
 
-.about-qr-credit strong {
+.about-lucrazi-link {
   color: #2482A6;
   font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.about-lucrazi-link:hover {
+  color: #1e6b8a;
+  border-bottom-color: #1e6b8a;
 }
 
 /* ========================================
