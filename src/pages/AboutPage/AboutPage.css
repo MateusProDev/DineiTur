@@ -397,6 +397,93 @@
 }
 
 /* ========================================
+   INSTAGRAM QR CODE SECTION
+   ======================================== */
+.about-instagram-section {
+  padding: 5rem 0;
+  background: #f8f9fa;
+}
+
+.about-instagram-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 24px;
+  padding: 3.5rem;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(36, 130, 166, 0.1);
+}
+
+.about-instagram-content h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  line-height: 1.25;
+  margin-bottom: 1rem;
+}
+
+.about-instagram-content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.about-instagram-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: linear-gradient(135deg, #E1306C, #833AB4);
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(225, 48, 108, 0.3);
+}
+
+.about-instagram-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(225, 48, 108, 0.4);
+}
+
+.about-instagram-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, rgba(36, 130, 166, 0.05), rgba(39, 57, 102, 0.05));
+  border-radius: 20px;
+  border: 2px dashed rgba(36, 130, 166, 0.2);
+}
+
+.about-qr-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-qr-credit {
+  font-size: 0.85rem;
+  color: #9ca3af;
+  text-align: center;
+  margin: 0;
+}
+
+.about-qr-credit strong {
+  color: #2482A6;
+  font-weight: 600;
+}
+
+/* ========================================
    CTA SECTION
    ======================================== */
 .about-cta-section {
@@ -507,6 +594,11 @@
   .about-values-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .about-instagram-card {
+    gap: 3rem;
+    padding: 2.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -577,6 +669,26 @@
     max-width: 300px;
     justify-content: center;
   }
+
+  .about-instagram-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .about-instagram-content h2 {
+    font-size: 1.85rem;
+  }
+
+  .about-instagram-link {
+    margin: 0 auto;
+  }
+
+  .about-qr-image {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -603,6 +715,19 @@
   .about-cta-card {
     padding: 2.5rem 1.25rem;
     border-radius: 16px;
+  }
+
+  .about-instagram-card {
+    padding: 1.5rem;
+  }
+
+  .about-instagram-qr {
+    padding: 1.5rem;
+  }
+
+  .about-qr-image {
+    width: 150px;
+    height: 150px;
   }
 }
   

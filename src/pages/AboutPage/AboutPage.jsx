@@ -231,6 +231,46 @@ const AboutPage = () => {
         </div>
       </section>
 
+      {/* Instagram QR Code Section */}
+      <section className="about-instagram-section">
+        <div className="about-container">
+          <div className="about-instagram-card">
+            <div className="about-instagram-content">
+              <div className="section-label">
+                <FiHeart /> Siga-nos no Instagram
+              </div>
+              <h2>
+                Acompanhe Nossas<br />
+                <span className="title-highlight">Aventuras</span>
+              </h2>
+              <p>
+                Escaneie o QR code para seguir nosso Instagram e ver fotos das nossas viagens,
+                destinos incríveis e novidades exclusivas do Ceará.
+              </p>
+              <a
+                href="https://instagram.com/dineitur"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="about-instagram-link"
+              >
+                <FiArrowRight />
+                Visitar Instagram
+              </a>
+            </div>
+            <div className="about-instagram-qr">
+              <img
+                src="/qr-code-lucrazi (23).png"
+                alt="QR Code Instagram DineiTur"
+                className="about-qr-image"
+              />
+              <p className="about-qr-credit">
+                QR Code gerado com <strong>Lucrazi</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Final */}
       <section className="about-cta-section">
         <div className="about-container">
